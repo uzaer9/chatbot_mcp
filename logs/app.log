@@ -11,3 +11,356 @@
 2025-09-16 01:12:23 | ERROR    | app.mcp_client:connect_to_server:545 - Connection failed: 
 2025-09-16 01:12:48 | INFO     | app.mcp_client:cleanup:1087 - Multi-tool MCP session closed
 2025-09-16 01:12:48 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-16 01:13:43 | INFO     | app.mcp_client:__init__:508 - Multi-tool SoccerMCPClient initialized with visualization filtering
+2025-09-16 01:13:43 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-16 01:13:43 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-16 01:14:21 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare
+2025-09-16 01:14:21 | INFO     | app.mcp_client:process_query_stream:833 - Processing multi-tool streaming query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare
+2025-09-16 01:14:21 | INFO     | app.mcp_client:connect_to_server:515 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-16 01:14:25 | INFO     | app.mcp_client:connect_to_server:541 - Connected! Tools: 9
+2025-09-16 01:14:26 | INFO     | app.mcp_client:process_query_stream:872 - Multi-tool Gemini response (iteration 1): {"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"league_id": "ESP-La Liga", "season": "1213", "stat_type": "standard", "player": "Ronaldo", "team": "Real Madrid"}}}
+...
+2025-09-16 01:14:26 | INFO     | app.mcp_client:execute_tool:756 - Executing multi-tool: get_player_season_stats_filtered with params: {'league_id': 'ESP-La Liga', 'season': '1213', 'stat_type': 'standard', 'player': 'Ronaldo', 'team': 'Real Madrid'}
+2025-09-16 01:14:28 | INFO     | app.mcp_client:execute_tool:780 - Tool get_player_season_stats_filtered returned player_stats data
+2025-09-16 01:14:28 | INFO     | app.mcp_client:execute_tool:784 - Retrieved 1 player records
+2025-09-16 01:14:28 | INFO     | app.mcp_client:process_query_stream:921 - Combined result contains: ['players']
+2025-09-16 01:14:28 | INFO     | app.mcp_client:should_extract_viz_data:672 - Checking if query needs viz extraction. Keywords found: True
+2025-09-16 01:14:28 | INFO     | app.mcp_client:extract_visualization_data:582 - === MULTI-TOOL VISUALIZATION EXTRACTION START ===
+2025-09-16 01:14:28 | INFO     | app.mcp_client:extract_visualization_data:583 - Original query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare
+
+Tool Result: Tool get_player_season_stats_filtered returned: {
+  "league": "ESP-La Liga",
+  "season": "1213",
+  "stat_type": "standard",
+  "filters": {
+    "player": "Ronaldo",
+    "team": "Real Madrid"
+  },
+  "total_records": 1,
+  "players": [
+    {
+      "league,": "ESP-La Liga",
+      "season,": "1213",
+      "team,": "Real Madrid",
+      "player,": "Cristiano Ronaldo",
+      "nation,": "POR",
+      "pos,": "FW,MF",
+      "age,": 27,
+      "born,": 1985,
+      "Playing Time,MP": 34,
+      "Playing Time,Starts": 30,
+      "Playing Time,Min": 2716,
+      "Playing Time,90s": 30.2,
+      "Performance,Gls": 34,
+      "Performance,Ast": 10,
+      "Performance,G+A": 44,
+      "Performance,G-PK": 28,
+      "Performance,PK": 6,
+      "Performance,PKatt": 7,
+      "Performance,CrdY": 9,
+      "Performance,CrdR": 0,
+      "Per 90 Minutes,Gls": 1.13,
+      "Per 90 Minutes,Ast": 0.33,
+      "Per 90 Minutes,G+A": 1.46,
+      "Per 90 Minutes,G-PK": 0.93,
+      "Per 90 Minutes,G+A-PK": 1.26
+    }
+  ]
+}
+
+Please provide a comprehensive answer based on this data.
+2025-09-16 01:14:28 | INFO     | app.mcp_client:extract_visualization_data:584 - Detected data type: player_stats
+2025-09-16 01:14:28 | INFO     | app.mcp_client:extract_visualization_data:585 - Raw data being sent for filtering: {
+  "players": [
+    {
+      "league,": "ESP-La Liga",
+      "season,": "1213",
+      "team,": "Real Madrid",
+      "player,": "Cristiano Ronaldo",
+      "nation,": "POR",
+      "pos,": "FW,MF",
+      "age,": 27,
+      "born,": 1985,
+      "Playing Time,MP": 34,
+      "Playing Time,Starts": 30,
+      "Playing Time,Min": 2716,
+      "Playing Time,90s": 30.2,
+      "Performance,Gls": 34,
+      "Performance,Ast": 10,
+      "Performance,G+A": 44,
+      "Performance,G-PK": 28,
+      "Performance,PK": 6,
+      "Performance,PKatt": 7,
+      "Performance,CrdY": 9,
+      "Performance,CrdR": 0,
+      "Per 90 Minutes,Gls": 1.13,
+      "Per 90 Minutes,Ast": 0.33,
+      "Per 90 Minutes,G+A": 1.46,
+      "Per 90 Minutes,G-PK": 0.93,
+      "Per 90 Minutes,G+A-PK": 1.26
+    }
+  ]
+}
+2025-09-16 01:14:28 | INFO     | app.mcp_client:extract_visualization_data:647 - Sending multi-tool data to Gemini for visualization filtering...
+2025-09-16 01:14:29 | INFO     | app.mcp_client:extract_visualization_data:650 - Gemini's multi-tool extraction response: ```json
+{
+  "players": [
+    {
+      "player": "Cristiano Ronaldo",
+      "Performance,Gls": 34,
+      "Performance,Ast": 10,
+      "Playing Time,MP": 34,
+      "Performance,CrdY": 9,
+      "Per 90 Minutes,Gls": 1.13,
+      "Per 90 Minutes,Ast": 0.33
+    }
+  ]
+}
+```
+2025-09-16 01:14:29 | INFO     | app.mcp_client:extract_visualization_data:656 - Extracted visualization data: {
+  "players": [
+    {
+      "player": "Cristiano Ronaldo",
+      "Performance,Gls": 34,
+      "Performance,Ast": 10,
+      "Playing Time,MP": 34,
+      "Performance,CrdY": 9,
+      "Per 90 Minutes,Gls": 1.13,
+      "Per 90 Minutes,Ast": 0.33
+    }
+  ]
+}
+2025-09-16 01:14:29 | INFO     | app.mcp_client:extract_visualization_data:657 - === MULTI-TOOL VISUALIZATION EXTRACTION SUCCESS ===
+2025-09-16 01:14:29 | INFO     | app.mcp_client:process_query_stream:935 - Multi-tool executed successfully: get_player_season_stats_filtered
+2025-09-16 01:14:31 | INFO     | app.mcp_client:process_query_stream:872 - Multi-tool Gemini response (iteration 2): Okay, I understand. The user wants to compare Ronaldo's stats for Real Madrid in the 2012-2013 La Liga season with Messi's stats for Barcelona in the same season. Since this involves player statistics, I need to use the `get_player_season_stats_filtered` tool for each player separately and then compare the results.
+
+```json
+{"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"league_id": "ESP-La Liga", "season": "1213", "stat_type": "standard", "player": "Messi", "team": "Barcelona"}}}
+```
+...
+2025-09-16 01:14:31 | INFO     | app.mcp_client:execute_tool:756 - Executing multi-tool: get_player_season_stats_filtered with params: {'league_id': 'ESP-La Liga', 'season': '1213', 'stat_type': 'standard', 'player': 'Messi', 'team': 'Barcelona'}
+2025-09-16 01:14:32 | INFO     | app.mcp_client:execute_tool:780 - Tool get_player_season_stats_filtered returned player_stats data
+2025-09-16 01:14:32 | INFO     | app.mcp_client:execute_tool:784 - Retrieved 1 player records
+2025-09-16 01:14:32 | INFO     | app.mcp_client:process_query_stream:921 - Combined result contains: ['players']
+2025-09-16 01:14:32 | INFO     | app.mcp_client:should_extract_viz_data:672 - Checking if query needs viz extraction. Keywords found: True
+2025-09-16 01:14:32 | INFO     | app.mcp_client:extract_visualization_data:582 - === MULTI-TOOL VISUALIZATION EXTRACTION START ===
+2025-09-16 01:14:32 | INFO     | app.mcp_client:extract_visualization_data:583 - Original query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare
+
+Tool Result: Tool get_player_season_stats_filtered returned: {
+  "league": "ESP-La Liga",
+  "season": "1213",
+  "stat_type": "standard",
+  "filters": {
+    "player": "Ronaldo",
+    "team": "Real Madrid"
+  },
+  "total_records": 1,
+  "players": [
+    {
+      "league,": "ESP-La Liga",
+      "season,": "1213",
+      "team,": "Real Madrid",
+      "player,": "Cristiano Ronaldo",
+      "nation,": "POR",
+      "pos,": "FW,MF",
+      "age,": 27,
+      "born,": 1985,
+      "Playing Time,MP": 34,
+      "Playing Time,Starts": 30,
+      "Playing Time,Min": 2716,
+      "Playing Time,90s": 30.2,
+      "Performance,Gls": 34,
+      "Performance,Ast": 10,
+      "Performance,G+A": 44,
+      "Performance,G-PK": 28,
+      "Performance,PK": 6,
+      "Performance,PKatt": 7,
+      "Performance,CrdY": 9,
+      "Performance,CrdR": 0,
+      "Per 90 Minutes,Gls": 1.13,
+      "Per 90 Minutes,Ast": 0.33,
+      "Per 90 Minutes,G+A": 1.46,
+      "Per 90 Minutes,G-PK": 0.93,
+      "Per 90 Minutes,G+A-PK": 1.26
+    }
+  ]
+}
+
+Please provide a comprehensive answer based on this data.
+
+Tool Result: Tool get_player_season_stats_filtered returned: {
+  "league": "ESP-La Liga",
+  "season": "1213",
+  "stat_type": "standard",
+  "filters": {
+    "player": "Messi",
+    "team": "Barcelona"
+  },
+  "total_records": 1,
+  "players": [
+    {
+      "league,": "ESP-La Liga",
+      "season,": "1213",
+      "team,": "Barcelona",
+      "player,": "Lionel Messi",
+      "nation,": "ARG",
+      "pos,": "FW,MF",
+      "age,": 25,
+      "born,": 1987,
+      "Playing Time,MP": 32,
+      "Playing Time,Starts": 28,
+      "Playing Time,Min": 2650,
+      "Playing Time,90s": 29.4,
+      "Performance,Gls": 46,
+      "Performance,Ast": 11,
+      "Performance,G+A": 57,
+      "Performance,G-PK": 42,
+      "Performance,PK": 4,
+      "Performance,PKatt": 4,
+      "Performance,CrdY": 1,
+      "Performance,CrdR": 0,
+      "Per 90 Minutes,Gls": 1.56,
+      "Per 90 Minutes,Ast": 0.37,
+      "Per 90 Minutes,G+A": 1.94,
+      "Per 90 Minutes,G-PK": 1.43,
+      "Per 90 Minutes,G+A-PK": 1.8
+    }
+  ]
+}
+
+Please provide a comprehensive answer based on this data.
+2025-09-16 01:14:32 | INFO     | app.mcp_client:extract_visualization_data:584 - Detected data type: player_stats
+2025-09-16 01:14:32 | INFO     | app.mcp_client:extract_visualization_data:585 - Raw data being sent for filtering: {
+  "players": [
+    {
+      "league,": "ESP-La Liga",
+      "season,": "1213",
+      "team,": "Real Madrid",
+      "player,": "Cristiano Ronaldo",
+      "nation,": "POR",
+      "pos,": "FW,MF",
+      "age,": 27,
+      "born,": 1985,
+      "Playing Time,MP": 34,
+      "Playing Time,Starts": 30,
+      "Playing Time,Min": 2716,
+      "Playing Time,90s": 30.2,
+      "Performance,Gls": 34,
+      "Performance,Ast": 10,
+      "Performance,G+A": 44,
+      "Performance,G-PK": 28,
+      "Performance,PK": 6,
+      "Performance,PKatt": 7,
+      "Performance,CrdY": 9,
+      "Performance,CrdR": 0,
+      "Per 90 Minutes,Gls": 1.13,
+      "Per 90 Minutes,Ast": 0.33,
+      "Per 90 Minutes,G+A": 1.46,
+      "Per 90 Minutes,G-PK": 0.93,
+      "Per 90 Minutes,G+A-PK": 1.26
+    },
+    {
+      "league,": "ESP-La Liga",
+      "season,": "1213",
+      "team,": "Barcelona",
+      "player,": "Lionel Messi",
+      "nation,": "ARG",
+      "pos,": "FW,MF",
+      "age,": 25,
+      "born,": 1987,
+      "Playing Time,MP": 32,
+      "Playing Time,Starts": 28,
+      "Playing Time,Min": 2650,
+      "Playing Time,90s": 29.4,
+      "Performance,Gls": 46,
+      "Performance,Ast": 11,
+      "Performance,G+A": 57,
+      "Performance,G-PK": 42,
+      "Performance,PK": 4,
+      "Performance,PKatt": 4,
+      "Performance,CrdY": 1,
+      "Performance,CrdR": 0,
+      "Per 90 Minutes,Gls": 1.56,
+      "Per 90 Minutes,Ast": 0.37,
+      "Per 90 Minutes,G+A": 1.94,
+      "Per 90 Minutes,G-PK": 1.43,
+      "Per 90 Minutes,G+A-PK": 1.8
+    }
+  ]
+}
+2025-09-16 01:14:32 | INFO     | app.mcp_client:extract_visualization_data:647 - Sending multi-tool data to Gemini for visualization filtering...
+2025-09-16 01:14:34 | INFO     | app.mcp_client:extract_visualization_data:650 - Gemini's multi-tool extraction response: ```json
+{
+  "players": [
+    {
+      "player": "Cristiano Ronaldo",
+      "Performance,Gls": 34,
+      "Performance,Ast": 10,
+      "Playing Time,MP": 34,
+      "Performance,CrdY": 9,
+      "Per 90 Minutes,Gls": 1.13,
+      "Per 90 Minutes,Ast": 0.33
+    },
+    {
+      "player": "Lionel Messi",
+      "Performance,Gls": 46,
+      "Performance,Ast": 11,
+      "Playing Time,MP": 32,
+      "Performance,CrdY": 1,
+      "Per 90 Minutes,Gls": 1.56,
+      "Per 90 Minutes,Ast": 0.37
+    }
+  ]
+}
+```
+2025-09-16 01:14:34 | INFO     | app.mcp_client:extract_visualization_data:656 - Extracted visualization data: {
+  "players": [
+    {
+      "player": "Cristiano Ronaldo",
+      "Performance,Gls": 34,
+      "Performance,Ast": 10,
+      "Playing Time,MP": 34,
+      "Performance,CrdY": 9,
+      "Per 90 Minutes,Gls": 1.13,
+      "Per 90 Minutes,Ast": 0.33
+    },
+    {
+      "player": "Lionel Messi",
+      "Performance,Gls": 46,
+      "Performance,Ast": 11,
+      "Playing Time,MP": 32,
+      "Performance,CrdY": 1,
+      "Per 90 Minutes,Gls": 1.56,
+      "Per 90 Minutes,Ast": 0.37
+    }
+  ]
+}
+2025-09-16 01:14:34 | INFO     | app.mcp_client:extract_visualization_data:657 - === MULTI-TOOL VISUALIZATION EXTRACTION SUCCESS ===
+2025-09-16 01:14:34 | INFO     | app.mcp_client:process_query_stream:935 - Multi-tool executed successfully: get_player_season_stats_filtered
+2025-09-16 01:14:38 | INFO     | app.mcp_client:process_query_stream:872 - Multi-tool Gemini response (iteration 3): In the 2012-2013 La Liga season:
+
+Lionel Messi (Barcelona):
+*   Played 32 matches, started 28 (2650 minutes, 29.4 90s)
+*   Scored 46 goals (1.56 per 90 minutes)
+*   Assisted 11 goals (0.37 per 90 minutes)
+*   Total goal contributions: 57 (1.94 per 90 minutes)
+*   4 penalty goals
+*   1 yellow card, 0 red cards
+
+Cristiano Ronaldo (Real Madrid):
+*   Played 34 matches, started 30 (2716 minutes, 30.2 90s)
+*   Scored 34 goals (1.13 per 90 minutes)
+*   Assisted 10 goals (0.33 per 90 minutes)
+*   Total goal contributions: 44 (1.46 per 90 minutes)
+*   6 penalty goals
+*   9 yellow cards, 0 red cards
+
+**Comparison:**
+
+*   **Goals:** Messi scored significantly more goals (46) than Ronaldo (34). Messi's per 90 goal rate (1.56) was also higher than Ronaldo's (1.13).
+*   **Assists:** Messi provided slightly more assists (11) compared to Ronaldo (10). Messi's per 90 assist rate (0.37) was marginally higher than Ronaldo's (0.33).
+*   **Total Goal Contributions:** Messi had a higher total goal contribut...
+2025-09-16 01:14:48 | INFO     | app.mcp_client:execute_tool:756 - Executing multi-tool: available_leagues with params: {}
+2025-09-16 01:14:48 | ERROR    | app.mcp_client:execute_tool:793 - Multi-tool execution error: 
+2025-09-16 01:53:12 | INFO     | app.mcp_client:cleanup:1087 - Multi-tool MCP session closed
+2025-09-16 01:53:12 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
