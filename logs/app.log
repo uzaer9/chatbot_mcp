@@ -14290,3 +14290,1002 @@ Messi outperformed Ronaldo in goals scored, assists, and total goal contribution
 2025-09-15 19:09:50 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
 2025-09-15 19:09:52 | INFO     | app.mcp_client:cleanup:1089 - Multi-tool MCP session closed
 2025-09-15 19:09:52 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-15 19:09:53 | INFO     | app.mcp_client:__init__:509 - Multi-tool SoccerMCPClient initialized with visualization filtering
+2025-09-15 19:09:53 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-15 19:09:53 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-15 19:10:22 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare it or visualize 
+2025-09-15 19:10:22 | INFO     | app.mcp_client:process_query_stream:835 - Processing multi-tool streaming query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare it or visualize 
+2025-09-15 19:10:22 | INFO     | app.mcp_client:connect_to_server:516 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-15 19:10:24 | INFO     | app.mcp_client:connect_to_server:542 - Connected! Tools: 9
+2025-09-15 19:10:26 | INFO     | app.mcp_client:process_query_stream:874 - Multi-tool Gemini response (iteration 1): {"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"league_id": "ESP-La Liga", "season": "1213", "stat_type": "standard", "player": "Ronaldo", "team": "Real Madrid"}}}
+...
+2025-09-15 19:10:26 | INFO     | app.mcp_client:execute_tool:758 - Executing multi-tool: get_player_season_stats_filtered with params: {'league_id': 'ESP-La Liga', 'season': '1213', 'stat_type': 'standard', 'player': 'Ronaldo', 'team': 'Real Madrid'}
+2025-09-15 19:10:26 | INFO     | app.mcp_client:execute_tool:782 - Tool get_player_season_stats_filtered returned player_stats data
+2025-09-15 19:10:26 | INFO     | app.mcp_client:execute_tool:786 - Retrieved 1 player records
+2025-09-15 19:10:26 | INFO     | app.mcp_client:process_query_stream:923 - Combined result contains: ['players']
+2025-09-15 19:10:26 | INFO     | app.mcp_client:should_extract_viz_data:674 - Checking if query needs viz extraction. Keywords found: True
+2025-09-15 19:10:26 | INFO     | app.mcp_client:extract_visualization_data:584 - === MULTI-TOOL VISUALIZATION EXTRACTION START ===
+2025-09-15 19:10:26 | INFO     | app.mcp_client:extract_visualization_data:585 - Original query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare it or visualize 
+
+Tool Result: Tool get_player_season_stats_filtered returned: {
+  "league": "ESP-La Liga",
+  "season": "1213",
+  "stat_type": "standard",
+  "filters": {
+    "player": "Ronaldo",
+    "team": "Real Madrid"
+  },
+  "total_records": 1,
+  "players": [
+    {
+      "league,": "ESP-La Liga",
+      "season,": "1213",
+      "team,": "Real Madrid",
+      "player,": "Cristiano Ronaldo",
+      "nation,": "POR",
+      "pos,": "FW,MF",
+      "age,": 27,
+      "born,": 1985,
+      "Playing Time,MP": 34,
+      "Playing Time,Starts": 30,
+      "Playing Time,Min": 2716,
+      "Playing Time,90s": 30.2,
+      "Performance,Gls": 34,
+      "Performance,Ast": 10,
+      "Performance,G+A": 44,
+      "Performance,G-PK": 28,
+      "Performance,PK": 6,
+      "Performance,PKatt": 7,
+      "Performance,CrdY": 9,
+      "Performance,CrdR": 0,
+      "Per 90 Minutes,Gls": 1.13,
+      "Per 90 Minutes,Ast": 0.33,
+      "Per 90 Minutes,G+A": 1.46,
+      "Per 90 Minutes,G-PK": 0.93,
+      "Per 90 Minutes,G+A-PK": 1.26
+    }
+  ]
+}
+
+Please provide a comprehensive answer based on this data.
+2025-09-15 19:10:26 | INFO     | app.mcp_client:extract_visualization_data:586 - Detected data type: player_stats
+2025-09-15 19:10:26 | INFO     | app.mcp_client:extract_visualization_data:587 - Raw data being sent for filtering: {
+  "players": [
+    {
+      "league,": "ESP-La Liga",
+      "season,": "1213",
+      "team,": "Real Madrid",
+      "player,": "Cristiano Ronaldo",
+      "nation,": "POR",
+      "pos,": "FW,MF",
+      "age,": 27,
+      "born,": 1985,
+      "Playing Time,MP": 34,
+      "Playing Time,Starts": 30,
+      "Playing Time,Min": 2716,
+      "Playing Time,90s": 30.2,
+      "Performance,Gls": 34,
+      "Performance,Ast": 10,
+      "Performance,G+A": 44,
+      "Performance,G-PK": 28,
+      "Performance,PK": 6,
+      "Performance,PKatt": 7,
+      "Performance,CrdY": 9,
+      "Performance,CrdR": 0,
+      "Per 90 Minutes,Gls": 1.13,
+      "Per 90 Minutes,Ast": 0.33,
+      "Per 90 Minutes,G+A": 1.46,
+      "Per 90 Minutes,G-PK": 0.93,
+      "Per 90 Minutes,G+A-PK": 1.26
+    }
+  ]
+}
+2025-09-15 19:10:26 | INFO     | app.mcp_client:extract_visualization_data:649 - Sending multi-tool data to Gemini for visualization filtering...
+2025-09-15 19:10:28 | INFO     | app.mcp_client:extract_visualization_data:652 - Gemini's multi-tool extraction response: ```json
+{
+  "players": [
+    {
+      "player": "Cristiano Ronaldo",
+      "Performance,Gls": 34,
+      "Performance,Ast": 10,
+      "Playing Time,MP": 34,
+      "Performance,CrdY": 9,
+      "Per 90 Minutes,Gls": 1.13,
+      "Per 90 Minutes,Ast": 0.33
+    }
+  ]
+}
+```
+2025-09-15 19:10:28 | INFO     | app.mcp_client:extract_visualization_data:658 - Extracted visualization data: {
+  "players": [
+    {
+      "player": "Cristiano Ronaldo",
+      "Performance,Gls": 34,
+      "Performance,Ast": 10,
+      "Playing Time,MP": 34,
+      "Performance,CrdY": 9,
+      "Per 90 Minutes,Gls": 1.13,
+      "Per 90 Minutes,Ast": 0.33
+    }
+  ]
+}
+2025-09-15 19:10:28 | INFO     | app.mcp_client:extract_visualization_data:659 - === MULTI-TOOL VISUALIZATION EXTRACTION SUCCESS ===
+2025-09-15 19:10:28 | INFO     | app.mcp_client:process_query_stream:937 - Multi-tool executed successfully: get_player_season_stats_filtered
+2025-09-15 19:10:30 | INFO     | app.mcp_client:process_query_stream:874 - Multi-tool Gemini response (iteration 2): Okay, the user wants to compare Ronaldo's stats for Real Madrid in the 2012-2013 La Liga season with Messi's stats for Barcelona in the same season. Since the user is asking for player statistics, I need to use the `get_player_season_stats_filtered` tool for both players.
+
+First, I'll call the tool for Messi.
+
+```json
+{"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"league_id": "ESP-La Liga", "season": "1213", "stat_type": "standard", "player": "Messi", "team": "Barcelona"}}}
+```...
+2025-09-15 19:10:30 | INFO     | app.mcp_client:execute_tool:758 - Executing multi-tool: get_player_season_stats_filtered with params: {'league_id': 'ESP-La Liga', 'season': '1213', 'stat_type': 'standard', 'player': 'Messi', 'team': 'Barcelona'}
+2025-09-15 19:10:30 | INFO     | app.mcp_client:execute_tool:782 - Tool get_player_season_stats_filtered returned player_stats data
+2025-09-15 19:10:30 | INFO     | app.mcp_client:execute_tool:786 - Retrieved 1 player records
+2025-09-15 19:10:30 | INFO     | app.mcp_client:process_query_stream:923 - Combined result contains: ['players']
+2025-09-15 19:10:30 | INFO     | app.mcp_client:should_extract_viz_data:674 - Checking if query needs viz extraction. Keywords found: True
+2025-09-15 19:10:30 | INFO     | app.mcp_client:extract_visualization_data:584 - === MULTI-TOOL VISUALIZATION EXTRACTION START ===
+2025-09-15 19:10:30 | INFO     | app.mcp_client:extract_visualization_data:585 - Original query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare it or visualize 
+
+Tool Result: Tool get_player_season_stats_filtered returned: {
+  "league": "ESP-La Liga",
+  "season": "1213",
+  "stat_type": "standard",
+  "filters": {
+    "player": "Ronaldo",
+    "team": "Real Madrid"
+  },
+  "total_records": 1,
+  "players": [
+    {
+      "league,": "ESP-La Liga",
+      "season,": "1213",
+      "team,": "Real Madrid",
+      "player,": "Cristiano Ronaldo",
+      "nation,": "POR",
+      "pos,": "FW,MF",
+      "age,": 27,
+      "born,": 1985,
+      "Playing Time,MP": 34,
+      "Playing Time,Starts": 30,
+      "Playing Time,Min": 2716,
+      "Playing Time,90s": 30.2,
+      "Performance,Gls": 34,
+      "Performance,Ast": 10,
+      "Performance,G+A": 44,
+      "Performance,G-PK": 28,
+      "Performance,PK": 6,
+      "Performance,PKatt": 7,
+      "Performance,CrdY": 9,
+      "Performance,CrdR": 0,
+      "Per 90 Minutes,Gls": 1.13,
+      "Per 90 Minutes,Ast": 0.33,
+      "Per 90 Minutes,G+A": 1.46,
+      "Per 90 Minutes,G-PK": 0.93,
+      "Per 90 Minutes,G+A-PK": 1.26
+    }
+  ]
+}
+
+Please provide a comprehensive answer based on this data.
+
+Tool Result: Tool get_player_season_stats_filtered returned: {
+  "league": "ESP-La Liga",
+  "season": "1213",
+  "stat_type": "standard",
+  "filters": {
+    "player": "Messi",
+    "team": "Barcelona"
+  },
+  "total_records": 1,
+  "players": [
+    {
+      "league,": "ESP-La Liga",
+      "season,": "1213",
+      "team,": "Barcelona",
+      "player,": "Lionel Messi",
+      "nation,": "ARG",
+      "pos,": "FW,MF",
+      "age,": 25,
+      "born,": 1987,
+      "Playing Time,MP": 32,
+      "Playing Time,Starts": 28,
+      "Playing Time,Min": 2650,
+      "Playing Time,90s": 29.4,
+      "Performance,Gls": 46,
+      "Performance,Ast": 11,
+      "Performance,G+A": 57,
+      "Performance,G-PK": 42,
+      "Performance,PK": 4,
+      "Performance,PKatt": 4,
+      "Performance,CrdY": 1,
+      "Performance,CrdR": 0,
+      "Per 90 Minutes,Gls": 1.56,
+      "Per 90 Minutes,Ast": 0.37,
+      "Per 90 Minutes,G+A": 1.94,
+      "Per 90 Minutes,G-PK": 1.43,
+      "Per 90 Minutes,G+A-PK": 1.8
+    }
+  ]
+}
+
+Please provide a comprehensive answer based on this data.
+2025-09-15 19:10:30 | INFO     | app.mcp_client:extract_visualization_data:586 - Detected data type: player_stats
+2025-09-15 19:10:30 | INFO     | app.mcp_client:extract_visualization_data:587 - Raw data being sent for filtering: {
+  "players": [
+    {
+      "league,": "ESP-La Liga",
+      "season,": "1213",
+      "team,": "Real Madrid",
+      "player,": "Cristiano Ronaldo",
+      "nation,": "POR",
+      "pos,": "FW,MF",
+      "age,": 27,
+      "born,": 1985,
+      "Playing Time,MP": 34,
+      "Playing Time,Starts": 30,
+      "Playing Time,Min": 2716,
+      "Playing Time,90s": 30.2,
+      "Performance,Gls": 34,
+      "Performance,Ast": 10,
+      "Performance,G+A": 44,
+      "Performance,G-PK": 28,
+      "Performance,PK": 6,
+      "Performance,PKatt": 7,
+      "Performance,CrdY": 9,
+      "Performance,CrdR": 0,
+      "Per 90 Minutes,Gls": 1.13,
+      "Per 90 Minutes,Ast": 0.33,
+      "Per 90 Minutes,G+A": 1.46,
+      "Per 90 Minutes,G-PK": 0.93,
+      "Per 90 Minutes,G+A-PK": 1.26
+    },
+    {
+      "league,": "ESP-La Liga",
+      "season,": "1213",
+      "team,": "Barcelona",
+      "player,": "Lionel Messi",
+      "nation,": "ARG",
+      "pos,": "FW,MF",
+      "age,": 25,
+      "born,": 1987,
+      "Playing Time,MP": 32,
+      "Playing Time,Starts": 28,
+      "Playing Time,Min": 2650,
+      "Playing Time,90s": 29.4,
+      "Performance,Gls": 46,
+      "Performance,Ast": 11,
+      "Performance,G+A": 57,
+      "Performance,G-PK": 42,
+      "Performance,PK": 4,
+      "Performance,PKatt": 4,
+      "Performance,CrdY": 1,
+      "Performance,CrdR": 0,
+      "Per 90 Minutes,Gls": 1.56,
+      "Per 90 Minutes,Ast": 0.37,
+      "Per 90 Minutes,G+A": 1.94,
+      "Per 90 Minutes,G-PK": 1.43,
+      "Per 90 Minutes,G+A-PK": 1.8
+    }
+  ]
+}
+2025-09-15 19:10:30 | INFO     | app.mcp_client:extract_visualization_data:649 - Sending multi-tool data to Gemini for visualization filtering...
+2025-09-15 19:10:32 | INFO     | app.mcp_client:extract_visualization_data:652 - Gemini's multi-tool extraction response: ```json
+[
+  {
+    "player": "Cristiano Ronaldo",
+    "Performance,Gls": 34,
+    "Performance,Ast": 10,
+    "Playing Time,MP": 34,
+    "Performance,CrdY": 9,
+    "Per 90 Minutes,Gls": 1.13,
+    "Per 90 Minutes,Ast": 0.33
+  },
+  {
+    "player": "Lionel Messi",
+    "Performance,Gls": 46,
+    "Performance,Ast": 11,
+    "Playing Time,MP": 32,
+    "Performance,CrdY": 1,
+    "Per 90 Minutes,Gls": 1.56,
+    "Per 90 Minutes,Ast": 0.37
+  }
+]
+```
+2025-09-15 19:10:32 | ERROR    | app.mcp_client:extract_visualization_data:667 - Multi-tool visualization extraction failed: Extra data: line 9 column 4 (char 211)
+2025-09-15 19:10:32 | INFO     | app.mcp_client:process_query_stream:937 - Multi-tool executed successfully: get_player_season_stats_filtered
+2025-09-15 19:10:37 | INFO     | app.mcp_client:process_query_stream:874 - Multi-tool Gemini response (iteration 3): Here's a comparison of Cristiano Ronaldo's and Lionel Messi's stats from the 2012-2013 La Liga season:
+
+**Cristiano Ronaldo (Real Madrid):**
+
+*   **Games Played (MP):** 34
+*   **Goals (Gls):** 34
+*   **Assists (Ast):** 10
+*   **Goals + Assists (G+A):** 44
+*   **Goals - Penalty Kick (G-PK):** 28
+*   **Penalty Kicks Made (PK):** 6
+*   **Yellow Cards (CrdY):** 9
+*   **Goals per 90 Minutes:** 1.13
+*   **Assists per 90 Minutes:** 0.33
+*   **Goals + Assists per 90 Minutes:** 1.46
+
+**Lionel Messi (Barcelona):**
+
+*   **Games Played (MP):** 32
+*   **Goals (Gls):** 46
+*   **Assists (Ast):** 11
+*   **Goals + Assists (G+A):** 57
+*   **Goals - Penalty Kick (G-PK):** 42
+*   **Penalty Kicks Made (PK):** 4
+*   **Yellow Cards (CrdY):** 1
+*   **Goals per 90 Minutes:** 1.56
+*   **Assists per 90 Minutes:** 0.37
+*   **Goals + Assists per 90 Minutes:** 1.94
+
+**Comparison:**
+
+*   **Goals:** Messi scored significantly more goals (46) than Ronaldo (34).
+*   **Assists:** Messi provided slightly more assists (11...
+2025-09-15 19:10:49 | INFO     | app.mcp_client:execute_tool:758 - Executing multi-tool: available_leagues with params: {}
+2025-09-15 19:10:49 | ERROR    | app.mcp_client:execute_tool:795 - Multi-tool execution error: 
+2025-09-15 19:48:55 | INFO     | app.mcp_client:cleanup:1089 - Multi-tool MCP session closed
+2025-09-15 19:48:55 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-15 19:49:03 | INFO     | app.mcp_client:__init__:509 - Multi-tool SoccerMCPClient initialized with visualization filtering
+2025-09-15 19:49:03 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-15 19:49:03 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-15 19:49:03 | INFO     | app.mcp_client:cleanup:1089 - Multi-tool MCP session closed
+2025-09-15 19:49:03 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-15 19:49:05 | INFO     | app.mcp_client:__init__:509 - Multi-tool SoccerMCPClient initialized with visualization filtering
+2025-09-15 19:49:05 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-15 19:49:05 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-15 19:49:08 | INFO     | app.mcp_client:cleanup:1089 - Multi-tool MCP session closed
+2025-09-15 19:49:08 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-15 19:50:59 | INFO     | app.mcp_client:__init__:509 - Multi-tool SoccerMCPClient initialized with visualization filtering
+2025-09-15 19:50:59 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-15 19:50:59 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-15 19:51:36 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare it or visualize
+2025-09-15 19:51:36 | INFO     | app.mcp_client:process_query_stream:835 - Processing multi-tool streaming query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare it or visualize
+2025-09-15 19:51:36 | INFO     | app.mcp_client:connect_to_server:516 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-15 19:51:36 | ERROR    | app.mcp_client:connect_to_server:546 - Connection failed: 
+2025-09-15 19:51:45 | INFO     | app.mcp_client:cleanup:1089 - Multi-tool MCP session closed
+2025-09-15 19:51:45 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-15 19:51:46 | INFO     | app.mcp_client:__init__:509 - Multi-tool SoccerMCPClient initialized with visualization filtering
+2025-09-15 19:51:46 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-15 19:51:46 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-15 19:51:50 | INFO     | app.mcp_client:cleanup:1089 - Multi-tool MCP session closed
+2025-09-15 19:51:50 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-15 19:51:52 | INFO     | app.mcp_client:__init__:509 - Multi-tool SoccerMCPClient initialized with visualization filtering
+2025-09-15 19:51:52 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-15 19:51:52 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-15 19:51:54 | INFO     | app.mcp_client:cleanup:1089 - Multi-tool MCP session closed
+2025-09-15 19:51:54 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-15 19:51:55 | INFO     | app.mcp_client:__init__:509 - Multi-tool SoccerMCPClient initialized with visualization filtering
+2025-09-15 19:51:55 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-15 19:51:55 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-15 19:52:14 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare it or visualize
+2025-09-15 19:52:14 | INFO     | app.mcp_client:process_query_stream:835 - Processing multi-tool streaming query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare it or visualize
+2025-09-15 19:52:14 | INFO     | app.mcp_client:connect_to_server:516 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-15 19:52:14 | ERROR    | app.mcp_client:connect_to_server:546 - Connection failed: 
+2025-09-15 19:59:20 | INFO     | app.mcp_client:__init__:509 - Multi-tool SoccerMCPClient initialized with visualization filtering
+2025-09-15 19:59:20 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-15 19:59:20 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-15 20:00:00 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare it or visualize.
+2025-09-15 20:00:00 | INFO     | app.mcp_client:process_query_stream:835 - Processing multi-tool streaming query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare it or visualize.
+2025-09-15 20:00:00 | INFO     | app.mcp_client:connect_to_server:516 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-15 20:00:00 | ERROR    | app.mcp_client:connect_to_server:546 - Connection failed: 
+2025-09-15 20:01:43 | INFO     | app.mcp_client:cleanup:1089 - Multi-tool MCP session closed
+2025-09-15 20:01:43 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-15 20:01:45 | INFO     | app.mcp_client:__init__:509 - Multi-tool SoccerMCPClient initialized with visualization filtering
+2025-09-15 20:01:45 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-15 20:01:45 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-15 20:01:50 | INFO     | app.mcp_client:cleanup:1089 - Multi-tool MCP session closed
+2025-09-15 20:01:50 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-15 20:01:51 | INFO     | app.mcp_client:__init__:509 - Multi-tool SoccerMCPClient initialized with visualization filtering
+2025-09-15 20:01:51 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-15 20:01:51 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-15 20:01:53 | INFO     | app.mcp_client:cleanup:1089 - Multi-tool MCP session closed
+2025-09-15 20:01:53 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-15 20:01:54 | INFO     | app.mcp_client:__init__:509 - Multi-tool SoccerMCPClient initialized with visualization filtering
+2025-09-15 20:01:54 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-15 20:01:54 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-15 20:01:56 | INFO     | app.mcp_client:cleanup:1089 - Multi-tool MCP session closed
+2025-09-15 20:01:56 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-15 20:01:57 | INFO     | app.mcp_client:__init__:509 - Multi-tool SoccerMCPClient initialized with visualization filtering
+2025-09-15 20:01:57 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-15 20:01:57 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-15 20:02:24 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare it or visualize.
+2025-09-15 20:02:24 | INFO     | app.mcp_client:process_query_stream:835 - Processing multi-tool streaming query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare it or visualize.
+2025-09-15 20:02:24 | INFO     | app.mcp_client:connect_to_server:516 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-15 20:02:24 | ERROR    | app.mcp_client:connect_to_server:546 - Connection failed: 
+2025-09-15 20:02:54 | INFO     | app.mcp_client:cleanup:1089 - Multi-tool MCP session closed
+2025-09-15 20:02:54 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-15 20:02:56 | INFO     | app.mcp_client:__init__:509 - Multi-tool SoccerMCPClient initialized with visualization filtering
+2025-09-15 20:02:56 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-15 20:02:56 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-15 20:03:13 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare it or visualize.
+2025-09-15 20:03:13 | INFO     | app.mcp_client:process_query_stream:835 - Processing multi-tool streaming query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare it or visualize.
+2025-09-15 20:03:13 | INFO     | app.mcp_client:connect_to_server:516 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-15 20:03:13 | ERROR    | app.mcp_client:connect_to_server:546 - Connection failed: 
+2025-09-15 20:05:16 | INFO     | app.mcp_client:cleanup:1089 - Multi-tool MCP session closed
+2025-09-15 20:05:16 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-15 20:05:51 | INFO     | app.mcp_client:__init__:509 - Multi-tool SoccerMCPClient initialized with visualization filtering
+2025-09-15 20:05:51 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-15 20:05:51 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-15 20:06:25 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare it or visualize
+2025-09-15 20:06:25 | INFO     | app.mcp_client:process_query_stream:835 - Processing multi-tool streaming query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare it or visualize
+2025-09-15 20:06:25 | INFO     | app.mcp_client:connect_to_server:516 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-15 20:06:25 | ERROR    | app.mcp_client:connect_to_server:546 - Connection failed: 
+2025-09-15 20:08:01 | INFO     | app.mcp_client:cleanup:1089 - Multi-tool MCP session closed
+2025-09-15 20:08:01 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-15 20:08:03 | INFO     | app.mcp_client:__init__:509 - Multi-tool SoccerMCPClient initialized with visualization filtering
+2025-09-15 20:08:03 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-15 20:08:03 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-15 20:08:21 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare it or visualize
+2025-09-15 20:08:21 | INFO     | app.mcp_client:process_query_stream:837 - Processing multi-tool streaming query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare it or visualize
+2025-09-15 20:08:21 | INFO     | app.mcp_client:connect_to_server:516 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-15 20:08:21 | ERROR    | app.mcp_client:connect_to_server:548 - Connection failed: 
+2025-09-15 20:12:56 | INFO     | app.mcp_client:cleanup:1091 - Multi-tool MCP session closed
+2025-09-15 20:12:56 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-15 20:12:58 | INFO     | app.mcp_client:__init__:509 - Multi-tool SoccerMCPClient initialized with visualization filtering
+2025-09-15 20:12:58 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-15 20:12:58 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-15 20:13:24 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare it or visualize
+2025-09-15 20:13:24 | INFO     | app.mcp_client:process_query_stream:837 - Processing multi-tool streaming query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare it or visualize
+2025-09-15 20:13:25 | INFO     | app.mcp_client:connect_to_server:516 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-15 20:13:25 | ERROR    | app.mcp_client:connect_to_server:548 - Connection failed: 
+2025-09-15 20:13:49 | INFO     | app.mcp_client:cleanup:1091 - Multi-tool MCP session closed
+2025-09-15 20:13:49 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-15 20:13:51 | INFO     | app.mcp_client:__init__:509 - Multi-tool SoccerMCPClient initialized with visualization filtering
+2025-09-15 20:13:51 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-15 20:13:51 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-15 20:14:18 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare it or visualize
+2025-09-15 20:14:18 | INFO     | app.mcp_client:process_query_stream:837 - Processing multi-tool streaming query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare it or visualize
+2025-09-15 20:14:19 | INFO     | app.mcp_client:connect_to_server:516 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-15 20:14:19 | ERROR    | app.mcp_client:connect_to_server:548 - Connection failed: 
+2025-09-15 20:14:27 | INFO     | app.mcp_client:cleanup:1091 - Multi-tool MCP session closed
+2025-09-15 20:14:27 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-15 20:14:29 | INFO     | app.mcp_client:__init__:509 - Multi-tool SoccerMCPClient initialized with visualization filtering
+2025-09-15 20:14:29 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-15 20:14:29 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-15 20:14:53 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare it or visualize
+2025-09-15 20:14:53 | INFO     | app.mcp_client:process_query_stream:837 - Processing multi-tool streaming query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare it or visualize
+2025-09-15 20:14:53 | INFO     | app.mcp_client:connect_to_server:516 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-15 20:14:53 | ERROR    | app.mcp_client:connect_to_server:548 - Connection failed: 
+2025-09-15 20:16:01 | INFO     | app.mcp_client:cleanup:1091 - Multi-tool MCP session closed
+2025-09-15 20:16:01 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-15 20:16:03 | INFO     | app.mcp_client:__init__:509 - Multi-tool SoccerMCPClient initialized with visualization filtering
+2025-09-15 20:16:03 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-15 20:16:03 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-15 20:16:24 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare it or visualize?
+2025-09-15 20:16:24 | INFO     | app.mcp_client:process_query_stream:837 - Processing multi-tool streaming query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare it or visualize?
+2025-09-15 20:16:24 | INFO     | app.mcp_client:connect_to_server:516 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-15 20:16:24 | ERROR    | app.mcp_client:connect_to_server:548 - Connection failed: 
+2025-09-15 20:17:57 | INFO     | app.mcp_client:cleanup:1091 - Multi-tool MCP session closed
+2025-09-15 20:17:57 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-15 20:19:17 | INFO     | app.mcp_client:__init__:509 - Multi-tool SoccerMCPClient initialized with visualization filtering
+2025-09-15 20:19:17 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-15 20:19:17 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-15 20:19:50 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare it or visualize
+2025-09-15 20:19:50 | INFO     | app.mcp_client:process_query_stream:837 - Processing multi-tool streaming query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare it or visualize
+2025-09-15 20:19:51 | INFO     | app.mcp_client:connect_to_server:516 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-15 20:19:51 | ERROR    | app.mcp_client:connect_to_server:548 - Connection failed: 
+2025-09-15 20:21:22 | INFO     | app.mcp_client:cleanup:1091 - Multi-tool MCP session closed
+2025-09-15 20:21:22 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-15 20:21:24 | INFO     | app.mcp_client:__init__:508 - Multi-tool SoccerMCPClient initialized with visualization filtering
+2025-09-15 20:21:24 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-15 20:21:24 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-15 20:21:47 | INFO     | app.mcp_client:cleanup:1087 - Multi-tool MCP session closed
+2025-09-15 20:21:47 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-15 20:21:49 | INFO     | app.mcp_client:__init__:508 - Multi-tool SoccerMCPClient initialized with visualization filtering
+2025-09-15 20:21:49 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-15 20:21:49 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-15 20:21:53 | INFO     | app.mcp_client:cleanup:1087 - Multi-tool MCP session closed
+2025-09-15 20:21:53 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-15 20:21:54 | INFO     | app.mcp_client:__init__:508 - Multi-tool SoccerMCPClient initialized with visualization filtering
+2025-09-15 20:21:54 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-15 20:21:54 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-15 20:22:17 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare it or visualize
+2025-09-15 20:22:17 | INFO     | app.mcp_client:process_query_stream:833 - Processing multi-tool streaming query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare it or visualize
+2025-09-15 20:22:17 | INFO     | app.mcp_client:connect_to_server:515 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-15 20:22:17 | ERROR    | app.mcp_client:connect_to_server:545 - Connection failed: 
+2025-09-15 20:30:49 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Get Modric stats for 2013-14 and visualize
+2025-09-15 20:30:49 | INFO     | app.mcp_client:process_query_stream:833 - Processing multi-tool streaming query: Get Modric stats for 2013-14 and visualize
+2025-09-15 20:30:49 | INFO     | app.mcp_client:connect_to_server:515 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-15 20:30:49 | ERROR    | app.mcp_client:connect_to_server:545 - Connection failed: 
+2025-09-15 20:33:28 | INFO     | app.mcp_client:cleanup:1087 - Multi-tool MCP session closed
+2025-09-15 20:33:28 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-15 20:33:31 | INFO     | app.mcp_client:__init__:508 - Multi-tool SoccerMCPClient initialized with visualization filtering
+2025-09-15 20:33:31 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-15 20:33:31 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-15 20:36:56 | INFO     | app.mcp_client:cleanup:989 - MCP session closed
+2025-09-15 20:36:56 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-15 20:36:59 | INFO     | app.mcp_client:__init__:508 - Multi-tool SoccerMCPClient initialized with visualization filtering
+2025-09-15 20:36:59 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-15 20:36:59 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-15 20:37:26 | INFO     | app.mcp_client:cleanup:989 - MCP session closed
+2025-09-15 20:37:26 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-15 20:37:28 | INFO     | app.mcp_client:__init__:508 - Multi-tool SoccerMCPClient initialized with visualization filtering
+2025-09-15 20:37:28 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-15 20:37:28 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-15 20:38:40 | INFO     | app.mcp_client:cleanup:989 - MCP session closed
+2025-09-15 20:38:40 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-15 20:41:59 | INFO     | app.mcp_client:__init__:508 - Multi-tool SoccerMCPClient initialized with visualization filtering
+2025-09-15 20:41:59 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-15 20:41:59 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-15 20:42:11 | INFO     | app.mcp_client:connect_to_server:515 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-15 20:42:11 | ERROR    | app.mcp_client:connect_to_server:545 - Connection failed: 
+2025-09-15 20:42:25 | INFO     | app.mcp_client:connect_to_server:515 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-15 20:42:25 | ERROR    | app.mcp_client:connect_to_server:545 - Connection failed: 
+2025-09-15 20:42:27 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare it or visualize
+2025-09-15 20:42:27 | INFO     | app.mcp_client:process_query_stream:749 - Processing streaming query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare it or visualize
+2025-09-15 20:42:27 | INFO     | app.mcp_client:connect_to_server:515 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-15 20:42:27 | ERROR    | app.mcp_client:connect_to_server:545 - Connection failed: 
+2025-09-15 20:42:31 | INFO     | app.mcp_client:connect_to_server:515 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-15 20:42:31 | ERROR    | app.mcp_client:connect_to_server:545 - Connection failed: 
+2025-09-15 20:44:40 | INFO     | app.mcp_client:cleanup:989 - MCP session closed
+2025-09-15 20:44:40 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-15 20:44:42 | INFO     | app.mcp_client:__init__:508 - Multi-tool SoccerMCPClient initialized with visualization filtering
+2025-09-15 20:44:42 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-15 20:44:42 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-15 20:46:58 | INFO     | app.mcp_client:cleanup:989 - MCP session closed
+2025-09-15 20:46:58 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-15 20:50:25 | INFO     | app.mcp_client:__init__:508 - Multi-tool SoccerMCPClient initialized with visualization filtering
+2025-09-15 20:50:25 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-15 20:50:25 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-15 20:50:41 | INFO     | app.mcp_client:connect_to_server:515 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-15 20:50:43 | INFO     | app.mcp_client:connect_to_server:541 - Connected! Tools: 9
+2025-09-15 20:50:43 | INFO     | app.mcp_client:execute_tool:682 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-15 20:50:55 | INFO     | app.mcp_client:execute_tool:682 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-15 20:50:57 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare it or visualize
+2025-09-15 20:50:57 | INFO     | app.mcp_client:process_query_stream:749 - Processing streaming query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare it or visualize
+2025-09-15 20:50:57 | INFO     | app.mcp_client:should_extract_viz_data:631 - Checking visualization keywords: True
+2025-09-15 20:51:04 | INFO     | app.mcp_client:process_query_stream:795 - Gemini response (iteration 1)
+2025-09-15 20:51:04 | INFO     | app.mcp_client:execute_tool:682 - Executing tool: get_player_season_stats_filtered with params: {'league_id': 'ESP-La Liga', 'season': '1213', 'player': 'Ronaldo', 'stat_type': 'standard'}
+2025-09-15 20:51:05 | INFO     | app.mcp_client:execute_tool:703 - Tool returned successfully
+2025-09-15 20:51:06 | INFO     | app.mcp_client:process_query_stream:795 - Gemini response (iteration 2)
+2025-09-15 20:51:06 | INFO     | app.mcp_client:execute_tool:682 - Executing tool: get_player_season_stats_filtered with params: {'league_id': 'ESP-La Liga', 'season': '1213', 'player': 'Ronaldo', 'stat_type': 'standard'}
+2025-09-15 20:51:06 | INFO     | app.mcp_client:execute_tool:703 - Tool returned successfully
+2025-09-15 20:51:12 | INFO     | app.mcp_client:process_query_stream:795 - Gemini response (iteration 3)
+2025-09-15 20:51:12 | INFO     | app.mcp_client:execute_tool:682 - Executing tool: get_player_season_stats_filtered with params: {'league_id': 'ESP-La Liga', 'season': '1213', 'player': 'Ronaldo', 'stat_type': 'standard'}
+2025-09-15 20:51:12 | INFO     | app.mcp_client:execute_tool:703 - Tool returned successfully
+2025-09-15 20:51:14 | INFO     | app.mcp_client:process_query_stream:795 - Gemini response (iteration 4)
+2025-09-15 20:51:14 | INFO     | app.mcp_client:execute_tool:682 - Executing tool: get_player_season_stats_filtered with params: {'league_id': 'ESP-La Liga', 'season': '1213', 'player': 'Ronaldo', 'stat_type': 'standard'}
+2025-09-15 20:51:14 | INFO     | app.mcp_client:execute_tool:703 - Tool returned successfully
+2025-09-15 20:51:16 | INFO     | app.mcp_client:process_query_stream:795 - Gemini response (iteration 5)
+2025-09-15 20:51:16 | INFO     | app.mcp_client:execute_tool:682 - Executing tool: get_player_season_stats_filtered with params: {'league_id': 'ESP-La Liga', 'season': '1213', 'player': 'Ronaldo', 'stat_type': 'standard'}
+2025-09-15 20:51:16 | INFO     | app.mcp_client:execute_tool:703 - Tool returned successfully
+2025-09-15 20:51:20 | INFO     | app.mcp_client:execute_tool:682 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-15 20:51:36 | INFO     | app.mcp_client:execute_tool:682 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-15 20:52:38 | INFO     | app.mcp_client:cleanup:989 - MCP session closed
+2025-09-15 20:52:38 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-15 20:52:42 | INFO     | app.mcp_client:__init__:508 - Multi-tool SoccerMCPClient initialized with visualization filtering
+2025-09-15 20:52:42 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-15 20:52:42 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-15 20:52:44 | INFO     | app.mcp_client:cleanup:989 - MCP session closed
+2025-09-15 20:52:44 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-15 20:52:45 | INFO     | app.mcp_client:__init__:508 - Multi-tool SoccerMCPClient initialized with visualization filtering
+2025-09-15 20:52:45 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-15 20:52:45 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-15 20:52:49 | INFO     | app.mcp_client:cleanup:989 - MCP session closed
+2025-09-15 20:52:49 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-15 20:52:50 | INFO     | app.mcp_client:__init__:508 - Multi-tool SoccerMCPClient initialized with visualization filtering
+2025-09-15 20:52:50 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-15 20:52:50 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-15 20:53:00 | INFO     | app.mcp_client:connect_to_server:515 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-15 20:53:02 | INFO     | app.mcp_client:connect_to_server:541 - Connected! Tools: 9
+2025-09-15 20:53:02 | INFO     | app.mcp_client:execute_tool:682 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-15 20:53:14 | INFO     | app.mcp_client:execute_tool:682 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-15 20:53:16 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare it or visualize?
+2025-09-15 20:53:16 | INFO     | app.mcp_client:process_query_stream:749 - Processing streaming query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare it or visualize?
+2025-09-15 20:53:17 | INFO     | app.mcp_client:should_extract_viz_data:631 - Checking visualization keywords: True
+2025-09-15 20:53:18 | INFO     | app.mcp_client:process_query_stream:795 - Gemini response (iteration 1)
+2025-09-15 20:53:18 | INFO     | app.mcp_client:execute_tool:682 - Executing tool: soccerdata-mcp:get_player_season_stats_filtered with params: {'league_id': 'ESP-La Liga', 'season': '1213', 'player': 'Ronaldo', 'stat_type': 'standard'}
+2025-09-15 20:53:20 | INFO     | app.mcp_client:process_query_stream:795 - Gemini response (iteration 2)
+2025-09-15 20:53:20 | INFO     | app.mcp_client:execute_tool:682 - Executing tool: get_player_season_stats_filtered with params: {'league_id': 'ESP-La Liga', 'season': '1213', 'player': 'Cristiano Ronaldo', 'stat_type': 'standard'}
+2025-09-15 20:53:20 | INFO     | app.mcp_client:execute_tool:703 - Tool returned successfully
+2025-09-15 20:53:22 | INFO     | app.mcp_client:process_query_stream:795 - Gemini response (iteration 3)
+2025-09-15 20:53:22 | INFO     | app.mcp_client:execute_tool:682 - Executing tool: get_player_season_stats_filtered with params: {'league_id': 'ESP-La Liga', 'season': '1213', 'player': 'Cristiano Ronaldo', 'stat_type': 'standard'}
+2025-09-15 20:53:22 | INFO     | app.mcp_client:execute_tool:703 - Tool returned successfully
+2025-09-15 20:53:24 | INFO     | app.mcp_client:process_query_stream:795 - Gemini response (iteration 4)
+2025-09-15 20:53:24 | INFO     | app.mcp_client:execute_tool:682 - Executing tool: get_player_season_stats_filtered with params: {'league_id': 'ESP-La Liga', 'season': '1213', 'player': 'Cristiano Ronaldo', 'stat_type': 'standard'}
+2025-09-15 20:53:24 | INFO     | app.mcp_client:execute_tool:703 - Tool returned successfully
+2025-09-15 20:53:26 | INFO     | app.mcp_client:process_query_stream:795 - Gemini response (iteration 5)
+2025-09-15 20:53:26 | INFO     | app.mcp_client:execute_tool:682 - Executing tool: get_player_season_stats_filtered with params: {'league_id': 'ESP-La Liga', 'season': '1213', 'player': 'Cristiano Ronaldo', 'stat_type': 'standard'}
+2025-09-15 20:53:26 | INFO     | app.mcp_client:execute_tool:703 - Tool returned successfully
+2025-09-15 20:53:30 | INFO     | app.mcp_client:execute_tool:682 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-15 20:54:13 | INFO     | app.mcp_client:cleanup:989 - MCP session closed
+2025-09-15 20:54:13 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-15 20:54:17 | INFO     | app.mcp_client:__init__:508 - Multi-tool SoccerMCPClient initialized with visualization filtering
+2025-09-15 20:54:17 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-15 20:54:17 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-15 20:54:56 | INFO     | app.mcp_client:cleanup:1087 - Multi-tool MCP session closed
+2025-09-15 20:54:56 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-15 20:54:58 | INFO     | app.mcp_client:__init__:508 - Multi-tool SoccerMCPClient initialized with visualization filtering
+2025-09-15 20:54:58 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-15 20:54:58 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-15 20:55:24 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare it or visualize
+2025-09-15 20:55:24 | INFO     | app.mcp_client:process_query_stream:833 - Processing multi-tool streaming query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare it or visualize
+2025-09-15 20:55:24 | INFO     | app.mcp_client:connect_to_server:515 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-15 20:55:26 | INFO     | app.mcp_client:connect_to_server:541 - Connected! Tools: 9
+2025-09-15 20:55:28 | INFO     | app.mcp_client:process_query_stream:872 - Multi-tool Gemini response (iteration 1): ```json
+{
+  "tool_call": {
+    "name": "get_player_season_stats_filtered",
+    "parameters": {
+      "league_id": "ESP-La Liga",
+      "season": "1213",
+      "stat_type": "standard",
+      "player": "Ronaldo",
+      "team": "Real Madrid"
+    }
+  }
+}
+```...
+2025-09-15 20:55:28 | INFO     | app.mcp_client:execute_tool:756 - Executing multi-tool: get_player_season_stats_filtered with params: {'league_id': 'ESP-La Liga', 'season': '1213', 'stat_type': 'standard', 'player': 'Ronaldo', 'team': 'Real Madrid'}
+2025-09-15 20:55:28 | INFO     | app.mcp_client:execute_tool:780 - Tool get_player_season_stats_filtered returned player_stats data
+2025-09-15 20:55:28 | INFO     | app.mcp_client:execute_tool:784 - Retrieved 1 player records
+2025-09-15 20:55:29 | INFO     | app.mcp_client:process_query_stream:921 - Combined result contains: ['players']
+2025-09-15 20:55:29 | INFO     | app.mcp_client:should_extract_viz_data:672 - Checking if query needs viz extraction. Keywords found: True
+2025-09-15 20:55:29 | INFO     | app.mcp_client:extract_visualization_data:582 - === MULTI-TOOL VISUALIZATION EXTRACTION START ===
+2025-09-15 20:55:29 | INFO     | app.mcp_client:extract_visualization_data:583 - Original query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare it or visualize
+
+Tool Result: Tool get_player_season_stats_filtered returned: {
+  "league": "ESP-La Liga",
+  "season": "1213",
+  "stat_type": "standard",
+  "filters": {
+    "player": "Ronaldo",
+    "team": "Real Madrid"
+  },
+  "total_records": 1,
+  "players": [
+    {
+      "league,": "ESP-La Liga",
+      "season,": "1213",
+      "team,": "Real Madrid",
+      "player,": "Cristiano Ronaldo",
+      "nation,": "POR",
+      "pos,": "FW,MF",
+      "age,": 27,
+      "born,": 1985,
+      "Playing Time,MP": 34,
+      "Playing Time,Starts": 30,
+      "Playing Time,Min": 2716,
+      "Playing Time,90s": 30.2,
+      "Performance,Gls": 34,
+      "Performance,Ast": 10,
+      "Performance,G+A": 44,
+      "Performance,G-PK": 28,
+      "Performance,PK": 6,
+      "Performance,PKatt": 7,
+      "Performance,CrdY": 9,
+      "Performance,CrdR": 0,
+      "Per 90 Minutes,Gls": 1.13,
+      "Per 90 Minutes,Ast": 0.33,
+      "Per 90 Minutes,G+A": 1.46,
+      "Per 90 Minutes,G-PK": 0.93,
+      "Per 90 Minutes,G+A-PK": 1.26
+    }
+  ]
+}
+
+Please provide a comprehensive answer based on this data.
+2025-09-15 20:55:29 | INFO     | app.mcp_client:extract_visualization_data:584 - Detected data type: player_stats
+2025-09-15 20:55:29 | INFO     | app.mcp_client:extract_visualization_data:585 - Raw data being sent for filtering: {
+  "players": [
+    {
+      "league,": "ESP-La Liga",
+      "season,": "1213",
+      "team,": "Real Madrid",
+      "player,": "Cristiano Ronaldo",
+      "nation,": "POR",
+      "pos,": "FW,MF",
+      "age,": 27,
+      "born,": 1985,
+      "Playing Time,MP": 34,
+      "Playing Time,Starts": 30,
+      "Playing Time,Min": 2716,
+      "Playing Time,90s": 30.2,
+      "Performance,Gls": 34,
+      "Performance,Ast": 10,
+      "Performance,G+A": 44,
+      "Performance,G-PK": 28,
+      "Performance,PK": 6,
+      "Performance,PKatt": 7,
+      "Performance,CrdY": 9,
+      "Performance,CrdR": 0,
+      "Per 90 Minutes,Gls": 1.13,
+      "Per 90 Minutes,Ast": 0.33,
+      "Per 90 Minutes,G+A": 1.46,
+      "Per 90 Minutes,G-PK": 0.93,
+      "Per 90 Minutes,G+A-PK": 1.26
+    }
+  ]
+}
+2025-09-15 20:55:29 | INFO     | app.mcp_client:extract_visualization_data:647 - Sending multi-tool data to Gemini for visualization filtering...
+2025-09-15 20:55:30 | INFO     | app.mcp_client:extract_visualization_data:650 - Gemini's multi-tool extraction response: ```json
+{
+  "players": [
+    {
+      "player": "Cristiano Ronaldo",
+      "Performance,Gls": 34,
+      "Performance,Ast": 10,
+      "Playing Time,MP": 34,
+      "Performance,CrdY": 9,
+      "Per 90 Minutes,Gls": 1.13,
+      "Per 90 Minutes,Ast": 0.33
+    }
+  ]
+}
+```
+2025-09-15 20:55:30 | INFO     | app.mcp_client:extract_visualization_data:656 - Extracted visualization data: {
+  "players": [
+    {
+      "player": "Cristiano Ronaldo",
+      "Performance,Gls": 34,
+      "Performance,Ast": 10,
+      "Playing Time,MP": 34,
+      "Performance,CrdY": 9,
+      "Per 90 Minutes,Gls": 1.13,
+      "Per 90 Minutes,Ast": 0.33
+    }
+  ]
+}
+2025-09-15 20:55:30 | INFO     | app.mcp_client:extract_visualization_data:657 - === MULTI-TOOL VISUALIZATION EXTRACTION SUCCESS ===
+2025-09-15 20:55:30 | INFO     | app.mcp_client:process_query_stream:935 - Multi-tool executed successfully: get_player_season_stats_filtered
+2025-09-15 20:55:32 | INFO     | app.mcp_client:process_query_stream:872 - Multi-tool Gemini response (iteration 2): The user wants to compare Cristiano Ronaldo's and Lionel Messi's stats for the 2012-2013 La Liga season. I already have Ronaldo's stats. Now I need to get Messi's stats using the `get_player_season_stats_filtered` tool.
+
+```json
+{"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"league_id": "ESP-La Liga", "season": "1213", "stat_type": "standard", "player": "Messi", "team": "Barcelona"}}}
+```...
+2025-09-15 20:55:32 | INFO     | app.mcp_client:execute_tool:756 - Executing multi-tool: get_player_season_stats_filtered with params: {'league_id': 'ESP-La Liga', 'season': '1213', 'stat_type': 'standard', 'player': 'Messi', 'team': 'Barcelona'}
+2025-09-15 20:55:33 | INFO     | app.mcp_client:execute_tool:780 - Tool get_player_season_stats_filtered returned player_stats data
+2025-09-15 20:55:33 | INFO     | app.mcp_client:execute_tool:784 - Retrieved 1 player records
+2025-09-15 20:55:33 | INFO     | app.mcp_client:process_query_stream:921 - Combined result contains: ['players']
+2025-09-15 20:55:33 | INFO     | app.mcp_client:should_extract_viz_data:672 - Checking if query needs viz extraction. Keywords found: True
+2025-09-15 20:55:33 | INFO     | app.mcp_client:extract_visualization_data:582 - === MULTI-TOOL VISUALIZATION EXTRACTION START ===
+2025-09-15 20:55:33 | INFO     | app.mcp_client:extract_visualization_data:583 - Original query: Ronaldo stats for real madrid season 2012-2013 la liga and messi stats for barcelona season 2012-2013 la liga compare it or visualize
+
+Tool Result: Tool get_player_season_stats_filtered returned: {
+  "league": "ESP-La Liga",
+  "season": "1213",
+  "stat_type": "standard",
+  "filters": {
+    "player": "Ronaldo",
+    "team": "Real Madrid"
+  },
+  "total_records": 1,
+  "players": [
+    {
+      "league,": "ESP-La Liga",
+      "season,": "1213",
+      "team,": "Real Madrid",
+      "player,": "Cristiano Ronaldo",
+      "nation,": "POR",
+      "pos,": "FW,MF",
+      "age,": 27,
+      "born,": 1985,
+      "Playing Time,MP": 34,
+      "Playing Time,Starts": 30,
+      "Playing Time,Min": 2716,
+      "Playing Time,90s": 30.2,
+      "Performance,Gls": 34,
+      "Performance,Ast": 10,
+      "Performance,G+A": 44,
+      "Performance,G-PK": 28,
+      "Performance,PK": 6,
+      "Performance,PKatt": 7,
+      "Performance,CrdY": 9,
+      "Performance,CrdR": 0,
+      "Per 90 Minutes,Gls": 1.13,
+      "Per 90 Minutes,Ast": 0.33,
+      "Per 90 Minutes,G+A": 1.46,
+      "Per 90 Minutes,G-PK": 0.93,
+      "Per 90 Minutes,G+A-PK": 1.26
+    }
+  ]
+}
+
+Please provide a comprehensive answer based on this data.
+
+Tool Result: Tool get_player_season_stats_filtered returned: {
+  "league": "ESP-La Liga",
+  "season": "1213",
+  "stat_type": "standard",
+  "filters": {
+    "player": "Messi",
+    "team": "Barcelona"
+  },
+  "total_records": 1,
+  "players": [
+    {
+      "league,": "ESP-La Liga",
+      "season,": "1213",
+      "team,": "Barcelona",
+      "player,": "Lionel Messi",
+      "nation,": "ARG",
+      "pos,": "FW,MF",
+      "age,": 25,
+      "born,": 1987,
+      "Playing Time,MP": 32,
+      "Playing Time,Starts": 28,
+      "Playing Time,Min": 2650,
+      "Playing Time,90s": 29.4,
+      "Performance,Gls": 46,
+      "Performance,Ast": 11,
+      "Performance,G+A": 57,
+      "Performance,G-PK": 42,
+      "Performance,PK": 4,
+      "Performance,PKatt": 4,
+      "Performance,CrdY": 1,
+      "Performance,CrdR": 0,
+      "Per 90 Minutes,Gls": 1.56,
+      "Per 90 Minutes,Ast": 0.37,
+      "Per 90 Minutes,G+A": 1.94,
+      "Per 90 Minutes,G-PK": 1.43,
+      "Per 90 Minutes,G+A-PK": 1.8
+    }
+  ]
+}
+
+Please provide a comprehensive answer based on this data.
+2025-09-15 20:55:33 | INFO     | app.mcp_client:extract_visualization_data:584 - Detected data type: player_stats
+2025-09-15 20:55:33 | INFO     | app.mcp_client:extract_visualization_data:585 - Raw data being sent for filtering: {
+  "players": [
+    {
+      "league,": "ESP-La Liga",
+      "season,": "1213",
+      "team,": "Real Madrid",
+      "player,": "Cristiano Ronaldo",
+      "nation,": "POR",
+      "pos,": "FW,MF",
+      "age,": 27,
+      "born,": 1985,
+      "Playing Time,MP": 34,
+      "Playing Time,Starts": 30,
+      "Playing Time,Min": 2716,
+      "Playing Time,90s": 30.2,
+      "Performance,Gls": 34,
+      "Performance,Ast": 10,
+      "Performance,G+A": 44,
+      "Performance,G-PK": 28,
+      "Performance,PK": 6,
+      "Performance,PKatt": 7,
+      "Performance,CrdY": 9,
+      "Performance,CrdR": 0,
+      "Per 90 Minutes,Gls": 1.13,
+      "Per 90 Minutes,Ast": 0.33,
+      "Per 90 Minutes,G+A": 1.46,
+      "Per 90 Minutes,G-PK": 0.93,
+      "Per 90 Minutes,G+A-PK": 1.26
+    },
+    {
+      "league,": "ESP-La Liga",
+      "season,": "1213",
+      "team,": "Barcelona",
+      "player,": "Lionel Messi",
+      "nation,": "ARG",
+      "pos,": "FW,MF",
+      "age,": 25,
+      "born,": 1987,
+      "Playing Time,MP": 32,
+      "Playing Time,Starts": 28,
+      "Playing Time,Min": 2650,
+      "Playing Time,90s": 29.4,
+      "Performance,Gls": 46,
+      "Performance,Ast": 11,
+      "Performance,G+A": 57,
+      "Performance,G-PK": 42,
+      "Performance,PK": 4,
+      "Performance,PKatt": 4,
+      "Performance,CrdY": 1,
+      "Performance,CrdR": 0,
+      "Per 90 Minutes,Gls": 1.56,
+      "Per 90 Minutes,Ast": 0.37,
+      "Per 90 Minutes,G+A": 1.94,
+      "Per 90 Minutes,G-PK": 1.43,
+      "Per 90 Minutes,G+A-PK": 1.8
+    }
+  ]
+}
+2025-09-15 20:55:33 | INFO     | app.mcp_client:extract_visualization_data:647 - Sending multi-tool data to Gemini for visualization filtering...
+2025-09-15 20:55:35 | INFO     | app.mcp_client:extract_visualization_data:650 - Gemini's multi-tool extraction response: ```json
+{
+  "visualization_data": [
+    {
+      "player": "Cristiano Ronaldo",
+      "Performance,Gls": 34,
+      "Performance,Ast": 10,
+      "Playing Time,MP": 34,
+      "Performance,CrdY": 9,
+      "Per 90 Minutes,Gls": 1.13,
+      "Per 90 Minutes,Ast": 0.33
+    },
+    {
+      "player": "Lionel Messi",
+      "Performance,Gls": 46,
+      "Performance,Ast": 11,
+      "Playing Time,MP": 32,
+      "Performance,CrdY": 1,
+      "Per 90 Minutes,Gls": 1.56,
+      "Per 90 Minutes,Ast": 0.37
+    }
+  ],
+  "chart_recommendation": "Bar chart comparison + Data table"
+}
+```
+2025-09-15 20:55:35 | INFO     | app.mcp_client:extract_visualization_data:656 - Extracted visualization data: {
+  "visualization_data": [
+    {
+      "player": "Cristiano Ronaldo",
+      "Performance,Gls": 34,
+      "Performance,Ast": 10,
+      "Playing Time,MP": 34,
+      "Performance,CrdY": 9,
+      "Per 90 Minutes,Gls": 1.13,
+      "Per 90 Minutes,Ast": 0.33
+    },
+    {
+      "player": "Lionel Messi",
+      "Performance,Gls": 46,
+      "Performance,Ast": 11,
+      "Playing Time,MP": 32,
+      "Performance,CrdY": 1,
+      "Per 90 Minutes,Gls": 1.56,
+      "Per 90 Minutes,Ast": 0.37
+    }
+  ],
+  "chart_recommendation": "Bar chart comparison + Data table"
+}
+2025-09-15 20:55:35 | INFO     | app.mcp_client:extract_visualization_data:657 - === MULTI-TOOL VISUALIZATION EXTRACTION SUCCESS ===
+2025-09-15 20:55:35 | INFO     | app.mcp_client:process_query_stream:935 - Multi-tool executed successfully: get_player_season_stats_filtered
+2025-09-15 20:55:41 | INFO     | app.mcp_client:process_query_stream:872 - Multi-tool Gemini response (iteration 3): Here's a comparison of Cristiano Ronaldo and Lionel Messi's standard stats for the 2012-2013 La Liga season:
+
+**Cristiano Ronaldo (Real Madrid):**
+
+*   **Age:** 27
+*   **Matches Played:** 34
+*   **Starts:** 30
+*   **Minutes Played:** 2716
+*   **Goals:** 34
+*   **Assists:** 10
+*   **Goals + Assists:** 44
+*   **Goals - Penalty Kick:** 28
+*   **Penalty Kicks:** 6
+*   **Penalty Kicks Attempted:** 7
+*   **Yellow Cards:** 9
+*   **Red Cards:** 0
+*   **Goals per 90 Minutes:** 1.13
+*   **Assists per 90 Minutes:** 0.33
+*   **Goals + Assists per 90 Minutes:** 1.46
+*   **Goals - PK per 90 Minutes:** 0.93
+*   **Goals + Assists - PK per 90 Minutes:** 1.26
+
+**Lionel Messi (Barcelona):**
+
+*   **Age:** 25
+*   **Matches Played:** 32
+*   **Starts:** 28
+*   **Minutes Played:** 2650
+*   **Goals:** 46
+*   **Assists:** 11
+*   **Goals + Assists:** 57
+*   **Goals - Penalty Kick:** 42
+*   **Penalty Kicks:** 4
+*   **Penalty Kicks Attempted:** 4
+*   **Yellow Cards:** 1
+*   **Red Cards:** 0
+*   **Goals per 90 Minu...
+2025-09-15 20:55:51 | INFO     | app.mcp_client:execute_tool:756 - Executing multi-tool: available_leagues with params: {}
+2025-09-15 20:55:51 | ERROR    | app.mcp_client:execute_tool:793 - Multi-tool execution error: 
+2025-09-15 20:56:01 | INFO     | app.mcp_client:cleanup:1087 - Multi-tool MCP session closed
+2025-09-15 20:56:01 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-15 20:56:05 | INFO     | app.mcp_client:__init__:508 - Multi-tool SoccerMCPClient initialized with visualization filtering
+2025-09-15 20:56:05 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-15 20:56:05 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-15 20:56:05 | INFO     | app.mcp_client:cleanup:1087 - Multi-tool MCP session closed
+2025-09-15 20:56:05 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-15 20:56:06 | INFO     | app.mcp_client:__init__:508 - Multi-tool SoccerMCPClient initialized with visualization filtering
+2025-09-15 20:56:06 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-15 20:56:06 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-15 20:56:06 | INFO     | app.mcp_client:cleanup:1087 - Multi-tool MCP session closed
+2025-09-15 20:56:06 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down

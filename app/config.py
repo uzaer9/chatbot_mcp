@@ -18,6 +18,7 @@ class Config:
     STREAMLIT_PORT: int = int(os.getenv("STREAMLIT_PORT", "8501"))
     
     # MCP Server Configuration
+    
     MCP_SERVER_PATH: str = os.getenv("MCP_SERVER_PATH", "./mcp_server/soccer_server.py")
     
     # Logging Configuration

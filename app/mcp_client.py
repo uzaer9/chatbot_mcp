@@ -468,7 +468,6 @@
 #         _context_manager = None
 #         self.session = None
 #         logger.info("MCP session closed")
-
 import asyncio
 import json
 import re
@@ -576,7 +575,6 @@ class SoccerMCPClient:
             return 'match_data'
         else:
             return 'unknown'
-    
     
     async def extract_visualization_data(self, raw_data: Dict, original_query: str, data_type: str) -> Dict:
         """Enhanced visualization data extraction for multiple tool types"""
@@ -864,7 +862,7 @@ Focus on accurate tool selection and data retrieval."""
             
             self.messages.append({"role": "user", "content": query})
             
-            max_iterations = 10
+            max_iterations = 5
             iteration = 0
             
             while iteration < max_iterations:
