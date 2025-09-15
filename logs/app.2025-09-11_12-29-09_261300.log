@@ -1,0 +1,1272 @@
+2025-09-11 13:04:47 | INFO     | app.mcp_client:__init__:25 - SoccerMCPClient initialized
+2025-09-11 13:04:47 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 13:04:47 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 13:04:48 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 13:04:50 | INFO     | app.mcp_client:__init__:25 - SoccerMCPClient initialized
+2025-09-11 13:04:50 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 13:04:50 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 13:06:18 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 13:06:20 | INFO     | app.mcp_client:__init__:25 - SoccerMCPClient initialized
+2025-09-11 13:06:20 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 13:06:20 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 13:11:34 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 13:11:36 | INFO     | app.mcp_client:__init__:25 - SoccerMCPClient initialized
+2025-09-11 13:11:36 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 13:11:36 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 13:12:15 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: What leagues are available?
+2025-09-11 13:12:15 | INFO     | app.mcp_client:process_query_stream:154 - Processing streaming query: What leagues are available?
+2025-09-11 13:12:15 | INFO     | app.mcp_client:connect_to_server:30 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-11 13:12:17 | INFO     | app.mcp_client:connect_to_server:55 - Connected successfully! Available tools: 9
+2025-09-11 13:12:18 | INFO     | app.mcp_client:process_query_stream:192 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "available_leagues", "parameters": {}}}
+```
+...
+2025-09-11 13:12:18 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: available_leagues with params: {}
+2025-09-11 13:12:18 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 13:12:18 | INFO     | app.mcp_client:process_query_stream:225 - Tool executed successfully: available_leagues
+2025-09-11 13:12:20 | INFO     | app.mcp_client:process_query_stream:192 - Gemini response (iteration 2): The available leagues data is not provided in the response from `available_leagues`.  The response o...
+2025-09-11 13:12:20 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: available_leagues with params: {}
+2025-09-11 13:12:20 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 13:12:20 | INFO     | app.mcp_client:process_query_stream:225 - Tool executed successfully: available_leagues
+2025-09-11 13:12:21 | INFO     | app.mcp_client:process_query_stream:192 - Gemini response (iteration 3): The provided tool call `available_leagues` returned an empty error message,  but no actual league da...
+2025-09-11 13:12:26 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-11 13:12:26 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 13:12:35 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-11 13:12:35 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 13:12:37 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: hii
+2025-09-11 13:12:37 | INFO     | app.mcp_client:process_query_stream:154 - Processing streaming query: hii
+2025-09-11 13:12:38 | INFO     | app.mcp_client:process_query_stream:192 - Gemini response (iteration 1): Hello! How can I help you today?
+...
+2025-09-11 13:12:42 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-11 13:12:42 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 13:12:53 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-11 13:12:53 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 13:12:55 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: What are the leagues available?
+2025-09-11 13:12:55 | INFO     | app.mcp_client:process_query_stream:154 - Processing streaming query: What are the leagues available?
+2025-09-11 13:12:56 | INFO     | app.mcp_client:process_query_stream:192 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "available_leagues", "parameters": {}}}
+```
+...
+2025-09-11 13:12:56 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: available_leagues with params: {}
+2025-09-11 13:12:56 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 13:12:56 | INFO     | app.mcp_client:process_query_stream:225 - Tool executed successfully: available_leagues
+2025-09-11 13:12:57 | INFO     | app.mcp_client:process_query_stream:192 - Gemini response (iteration 2): The provided data from `available_leagues` does not list the available leagues.  The response only i...
+2025-09-11 13:13:03 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-11 13:13:03 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 13:48:00 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-11 13:48:00 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 13:48:37 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-11 13:48:37 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 13:49:20 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 13:49:24 | INFO     | app.mcp_client:__init__:25 - SoccerMCPClient initialized
+2025-09-11 13:49:24 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 13:49:24 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 13:57:41 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: hii
+2025-09-11 13:57:41 | INFO     | app.mcp_client:process_query_stream:154 - Processing streaming query: hii
+2025-09-11 13:57:41 | INFO     | app.mcp_client:connect_to_server:30 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-11 13:57:44 | INFO     | app.mcp_client:connect_to_server:55 - Connected successfully! Available tools: 9
+2025-09-11 13:57:45 | INFO     | app.mcp_client:process_query_stream:192 - Gemini response (iteration 1): Hello!  How can I help you with your soccer analytics needs today?
+...
+2025-09-11 13:57:50 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-11 13:57:50 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 13:57:52 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-11 13:57:52 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 13:57:56 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-11 13:57:56 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 13:57:58 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: What leagues are available?
+2025-09-11 13:57:59 | INFO     | app.mcp_client:process_query_stream:154 - Processing streaming query: What leagues are available?
+2025-09-11 13:57:59 | INFO     | app.mcp_client:process_query_stream:192 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "available_leagues", "parameters": {}}}
+```
+...
+2025-09-11 13:57:59 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: available_leagues with params: {}
+2025-09-11 13:57:59 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 13:57:59 | INFO     | app.mcp_client:process_query_stream:225 - Tool executed successfully: available_leagues
+2025-09-11 13:58:01 | INFO     | app.mcp_client:process_query_stream:192 - Gemini response (iteration 2): ```json
+{"tool_call": {"name": "available_leagues", "parameters": {}}}
+```
+...
+2025-09-11 13:58:01 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: available_leagues with params: {}
+2025-09-11 13:58:01 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 13:58:01 | INFO     | app.mcp_client:process_query_stream:225 - Tool executed successfully: available_leagues
+2025-09-11 13:58:02 | INFO     | app.mcp_client:process_query_stream:192 - Gemini response (iteration 3): The provided `available_leagues` tool returned an empty error message, which isn't sufficient to lis...
+2025-09-11 13:58:07 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-11 13:58:07 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 15:10:17 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-11 15:10:17 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 15:20:37 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 15:20:41 | INFO     | app.mcp_client:__init__:25 - SoccerMCPClient initialized
+2025-09-11 15:20:41 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 15:20:41 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 15:20:43 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 15:20:45 | INFO     | app.mcp_client:__init__:25 - SoccerMCPClient initialized
+2025-09-11 15:20:45 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 15:20:45 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 15:20:45 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 15:20:46 | INFO     | app.mcp_client:__init__:25 - SoccerMCPClient initialized
+2025-09-11 15:20:46 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 15:20:46 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 15:20:46 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 15:20:48 | INFO     | app.mcp_client:__init__:25 - SoccerMCPClient initialized
+2025-09-11 15:20:48 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 15:20:48 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 15:20:48 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 15:20:49 | INFO     | app.mcp_client:__init__:25 - SoccerMCPClient initialized
+2025-09-11 15:20:49 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 15:20:49 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 15:20:49 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 15:20:50 | INFO     | app.mcp_client:__init__:25 - SoccerMCPClient initialized
+2025-09-11 15:20:50 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 15:20:50 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 15:20:50 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 15:20:52 | INFO     | app.mcp_client:__init__:25 - SoccerMCPClient initialized
+2025-09-11 15:20:52 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 15:20:52 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 15:20:52 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 15:20:53 | INFO     | app.mcp_client:__init__:25 - SoccerMCPClient initialized
+2025-09-11 15:20:53 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 15:20:53 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 15:20:53 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 15:20:55 | INFO     | app.mcp_client:__init__:25 - SoccerMCPClient initialized
+2025-09-11 15:20:55 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 15:20:55 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 15:21:45 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Hii , What leagues are available?
+2025-09-11 15:21:45 | INFO     | app.mcp_client:process_query_stream:154 - Processing streaming query: Hii , What leagues are available?
+2025-09-11 15:21:45 | INFO     | app.mcp_client:connect_to_server:30 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-11 15:21:47 | INFO     | app.mcp_client:connect_to_server:55 - Connected successfully! Available tools: 9
+2025-09-11 15:21:51 | INFO     | app.mcp_client:process_query_stream:192 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "available_leagues", "parameters": {}}}
+```
+...
+2025-09-11 15:21:52 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: available_leagues with params: {}
+2025-09-11 15:21:52 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 15:21:52 | INFO     | app.mcp_client:process_query_stream:225 - Tool executed successfully: available_leagues
+2025-09-11 15:22:06 | INFO     | app.mcp_client:process_query_stream:192 - Gemini response (iteration 2): The available leagues data is currently unavailable.  The `available_leagues` tool returned an empty...
+2025-09-11 15:22:11 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-11 15:22:11 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 15:23:33 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 15:23:36 | INFO     | app.mcp_client:__init__:25 - SoccerMCPClient initialized
+2025-09-11 15:23:36 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 15:23:36 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 15:24:02 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Hii , What leagues are available?
+2025-09-11 15:24:02 | INFO     | app.mcp_client:process_query_stream:154 - Processing streaming query: Hii , What leagues are available?
+2025-09-11 15:24:02 | INFO     | app.mcp_client:connect_to_server:30 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-11 15:24:04 | INFO     | app.mcp_client:connect_to_server:55 - Connected successfully! Available tools: 9
+2025-09-11 15:24:09 | INFO     | app.mcp_client:process_query_stream:192 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "available_leagues", "parameters": {}}}
+```
+...
+2025-09-11 15:24:10 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: available_leagues with params: {}
+2025-09-11 15:24:10 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 15:24:10 | INFO     | app.mcp_client:process_query_stream:225 - Tool executed successfully: available_leagues
+2025-09-11 15:24:12 | INFO     | app.mcp_client:process_query_stream:192 - Gemini response (iteration 2): The available leagues information is currently unavailable.  The `available_leagues` tool returned a...
+2025-09-11 15:24:17 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-11 15:24:17 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 15:25:59 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 15:26:02 | INFO     | app.mcp_client:__init__:25 - SoccerMCPClient initialized
+2025-09-11 15:26:02 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 15:26:02 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 15:26:38 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: What leagues are available?
+2025-09-11 15:26:38 | INFO     | app.mcp_client:process_query_stream:154 - Processing streaming query: What leagues are available?
+2025-09-11 15:26:38 | INFO     | app.mcp_client:connect_to_server:30 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-11 15:26:40 | INFO     | app.mcp_client:connect_to_server:55 - Connected successfully! Available tools: 9
+2025-09-11 15:26:42 | INFO     | app.mcp_client:process_query_stream:192 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "available__leagues", "parameters": {}}}
+```
+...
+2025-09-11 15:26:42 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: available__leagues with params: {}
+2025-09-11 15:26:42 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 15:26:42 | INFO     | app.mcp_client:process_query_stream:225 - Tool executed successfully: available__leagues
+2025-09-11 15:26:43 | INFO     | app.mcp_client:process_query_stream:192 - Gemini response (iteration 2): ```json
+{"tool_call": {"name": "available__leagues", "parameters": {}}}
+```
+...
+2025-09-11 15:26:43 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: available__leagues with params: {}
+2025-09-11 15:26:43 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 15:26:43 | INFO     | app.mcp_client:process_query_stream:225 - Tool executed successfully: available__leagues
+2025-09-11 15:26:45 | INFO     | app.mcp_client:process_query_stream:192 - Gemini response (iteration 3): The provided data from `available__leagues` doesn't contain a list of leagues.  The response shows a...
+2025-09-11 15:26:51 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-11 15:26:51 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 15:27:18 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-11 15:27:18 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 15:27:20 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Give me stats for Messi from barcelona in La liga season 2009
+2025-09-11 15:27:20 | INFO     | app.mcp_client:process_query_stream:154 - Processing streaming query: Give me stats for Messi from barcelona in La liga season 2009
+2025-09-11 15:27:22 | INFO     | app.mcp_client:process_query_stream:192 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"player_name": "Me...
+2025-09-11 15:27:22 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: get_player_season_stats_filtered with params: {'player_name': 'Messi', 'team_name': 'Barcelona', 'league_name': 'La Liga', 'season_year': 2009}
+2025-09-11 15:27:22 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 15:27:22 | INFO     | app.mcp_client:process_query_stream:225 - Tool executed successfully: get_player_season_stats_filtered
+2025-09-11 15:27:24 | INFO     | app.mcp_client:process_query_stream:192 - Gemini response (iteration 2): The provided data from `get_player_season_stats_filtered` indicates an error occurred while retrievi...
+2025-09-11 15:27:29 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-11 15:27:29 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 16:04:29 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 16:04:33 | INFO     | app.mcp_client:__init__:25 - SoccerMCPClient initialized
+2025-09-11 16:04:33 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 16:04:33 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 16:04:59 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 16:05:47 | INFO     | app.mcp_client:__init__:25 - SoccerMCPClient initialized
+2025-09-11 16:05:47 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 16:05:47 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 16:05:57 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 16:05:59 | INFO     | app.mcp_client:__init__:25 - SoccerMCPClient initialized
+2025-09-11 16:05:59 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 16:05:59 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 16:06:59 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Hiii, How are you?
+2025-09-11 16:06:59 | INFO     | app.mcp_client:process_query_stream:154 - Processing streaming query: Hiii, How are you?
+2025-09-11 16:06:59 | INFO     | app.mcp_client:connect_to_server:30 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-11 16:07:01 | INFO     | app.mcp_client:connect_to_server:55 - Connected successfully! Available tools: 9
+2025-09-11 16:07:08 | INFO     | app.mcp_client:process_query_stream:192 - Gemini response (iteration 1): Hi there! I'm doing well, thank you for asking.  How can I help you with your soccer analytics needs...
+2025-09-11 16:07:12 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-11 16:07:12 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 16:07:31 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-11 16:07:31 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 16:07:34 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: I want to see how many leagues are available?
+2025-09-11 16:07:34 | INFO     | app.mcp_client:process_query_stream:154 - Processing streaming query: I want to see how many leagues are available?
+2025-09-11 16:07:36 | INFO     | app.mcp_client:process_query_stream:192 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "available_leagues", "parameters": {}}}
+```
+...
+2025-09-11 16:07:36 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: available_leagues with params: {}
+2025-09-11 16:07:36 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 16:07:36 | INFO     | app.mcp_client:process_query_stream:225 - Tool executed successfully: available_leagues
+2025-09-11 16:07:38 | INFO     | app.mcp_client:process_query_stream:192 - Gemini response (iteration 2): The provided data from `available_leagues` does not contain the number of leagues.  The response onl...
+2025-09-11 16:07:38 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: read_leagues with params: {}
+2025-09-11 16:07:38 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 16:07:38 | INFO     | app.mcp_client:process_query_stream:225 - Tool executed successfully: read_leagues
+2025-09-11 16:07:40 | INFO     | app.mcp_client:process_query_stream:192 - Gemini response (iteration 3): The provided tool results don't give the number of leagues.  The `available_leagues` and `read_leagu...
+2025-09-11 16:07:45 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-11 16:07:45 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 16:09:15 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-11 16:09:15 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 16:09:17 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Show me Lionel Messi Stats for Barcelona in ESP- La Liga in season 1112
+2025-09-11 16:09:17 | INFO     | app.mcp_client:process_query_stream:154 - Processing streaming query: Show me Lionel Messi Stats for Barcelona in ESP- La Liga in season 1112
+2025-09-11 16:09:18 | INFO     | app.mcp_client:process_query_stream:192 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"player_name": "Li...
+2025-09-11 16:09:18 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: get_player_season_stats_filtered with params: {'player_name': 'Lionel Messi', 'team_name': 'Barcelona', 'league_name': 'ESP- La Liga', 'season_name': '1112'}
+2025-09-11 16:09:18 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 16:09:18 | INFO     | app.mcp_client:process_query_stream:225 - Tool executed successfully: get_player_season_stats_filtered
+2025-09-11 16:09:20 | INFO     | app.mcp_client:process_query_stream:192 - Gemini response (iteration 2): The provided tool `get_player_season_stats_filtered` returned an empty error message, which means it...
+2025-09-11 16:09:26 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-11 16:09:26 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 16:13:59 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 16:14:03 | INFO     | app.mcp_client:__init__:356 - SoccerMCPClient initialized
+2025-09-11 16:14:03 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 16:14:03 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 16:14:15 | INFO     | app.mcp_client:connect_to_server:361 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-11 16:14:17 | ERROR    | app.mcp_client:connect_to_server:394 - Failed to connect to MCP server: 
+2025-09-11 16:14:17 | INFO     | app.mcp_client:execute_tool:447 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-11 16:14:17 | ERROR    | app.mcp_client:execute_tool:476 - Tool execution error: 
+2025-09-11 16:14:31 | INFO     | app.mcp_client:execute_tool:447 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-11 16:14:31 | ERROR    | app.mcp_client:execute_tool:476 - Tool execution error: 
+2025-09-11 16:14:33 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Hiii, What are the leagues available?
+2025-09-11 16:14:33 | INFO     | app.mcp_client:process_query_stream:517 - Processing streaming query: Hiii, What are the leagues available?
+2025-09-11 16:14:34 | INFO     | app.mcp_client:process_query_stream:555 - Gemini response (iteration 1): ```json
+{
+  "tool_call": {
+    "name": "get_available_leagues",
+    "parameters": {}
+  }
+}
+```
+...
+2025-09-11 16:14:34 | INFO     | app.mcp_client:execute_tool:447 - Executing tool: soccerdata-mcp:get_available_leagues with params: {}
+2025-09-11 16:14:34 | ERROR    | app.mcp_client:execute_tool:476 - Tool execution error: 
+2025-09-11 16:14:34 | INFO     | app.mcp_client:process_query_stream:588 - Tool executed successfully: soccerdata-mcp:get_available_leagues
+2025-09-11 16:14:35 | INFO     | app.mcp_client:process_query_stream:555 - Gemini response (iteration 2): The available leagues are not specified in the provided data.  The `soccerdata-mcp:get_available_lea...
+2025-09-11 16:14:40 | INFO     | app.mcp_client:execute_tool:447 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-11 16:14:40 | ERROR    | app.mcp_client:execute_tool:476 - Tool execution error: 
+2025-09-11 16:15:58 | INFO     | app.mcp_client:execute_tool:447 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-11 16:15:58 | ERROR    | app.mcp_client:execute_tool:476 - Tool execution error: 
+2025-09-11 16:16:00 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Show me Lionel Messi Stats for Barcelona in ESP- La Liga in season 1112?
+2025-09-11 16:16:00 | INFO     | app.mcp_client:process_query_stream:517 - Processing streaming query: Show me Lionel Messi Stats for Barcelona in ESP- La Liga in season 1112?
+2025-09-11 16:16:07 | INFO     | app.mcp_client:process_query_stream:555 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"league_id": "ESP-...
+2025-09-11 16:16:07 | INFO     | app.mcp_client:execute_tool:447 - Executing tool: soccerdata-mcp:get_player_season_stats_filtered with params: {'league_id': 'ESP-La Liga', 'season': '1112', 'player': 'Lionel Messi', 'team': 'Barcelona', 'stat_type': 'standard'}
+2025-09-11 16:16:07 | ERROR    | app.mcp_client:execute_tool:476 - Tool execution error: 
+2025-09-11 16:16:07 | INFO     | app.mcp_client:process_query_stream:588 - Tool executed successfully: soccerdata-mcp:get_player_season_stats_filtered
+2025-09-11 16:16:13 | INFO     | app.mcp_client:process_query_stream:555 - Gemini response (iteration 2): ```json
+{"tool_call": {"name": "soccerdata-mcp:get_player_season_stats_filtered", "parameters": {"le...
+2025-09-11 16:16:13 | INFO     | app.mcp_client:execute_tool:447 - Executing tool: soccerdata-mcp:get_player_season_stats_filtered with params: {'league_id': 'ESP-La Liga', 'season': '1112', 'player': 'Lionel Messi', 'team': 'Barcelona', 'stat_type': 'standard'}
+2025-09-11 16:16:13 | ERROR    | app.mcp_client:execute_tool:476 - Tool execution error: 
+2025-09-11 16:16:13 | INFO     | app.mcp_client:process_query_stream:588 - Tool executed successfully: soccerdata-mcp:get_player_season_stats_filtered
+2025-09-11 16:16:14 | INFO     | app.mcp_client:process_query_stream:555 - Gemini response (iteration 3): ```json
+{"tool_call": {"name": "soccerdata-mcp:get_player_season_stats_filtered", "parameters": {"le...
+2025-09-11 16:16:14 | INFO     | app.mcp_client:execute_tool:447 - Executing tool: soccerdata-mcp:get_player_season_stats_filtered with params: {'league_id': 'ESP-La Liga', 'season': '1112', 'player': 'Lionel Messi', 'team': 'Barcelona', 'stat_type': 'standard'}
+2025-09-11 16:16:14 | ERROR    | app.mcp_client:execute_tool:476 - Tool execution error: 
+2025-09-11 16:16:14 | INFO     | app.mcp_client:process_query_stream:588 - Tool executed successfully: soccerdata-mcp:get_player_season_stats_filtered
+2025-09-11 16:16:19 | INFO     | app.mcp_client:execute_tool:447 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-11 16:16:19 | ERROR    | app.mcp_client:execute_tool:476 - Tool execution error: 
+2025-09-11 16:22:06 | INFO     | app.mcp_client:cleanup:702 - Streams closed
+2025-09-11 16:22:06 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 16:22:10 | INFO     | app.mcp_client:__init__:356 - SoccerMCPClient initialized
+2025-09-11 16:22:10 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 16:22:10 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 16:22:10 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 16:22:12 | INFO     | app.mcp_client:__init__:356 - SoccerMCPClient initialized
+2025-09-11 16:22:12 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 16:22:12 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 16:22:30 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 16:22:32 | INFO     | app.mcp_client:__init__:356 - SoccerMCPClient initialized
+2025-09-11 16:22:32 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 16:22:32 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 16:22:56 | INFO     | app.mcp_client:connect_to_server:361 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-11 16:22:58 | ERROR    | app.mcp_client:connect_to_server:394 - Failed to connect to MCP server: 
+2025-09-11 16:22:58 | INFO     | app.mcp_client:execute_tool:447 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-11 16:22:58 | ERROR    | app.mcp_client:execute_tool:476 - Tool execution error: 
+2025-09-11 16:23:07 | INFO     | app.mcp_client:execute_tool:447 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-11 16:23:07 | ERROR    | app.mcp_client:execute_tool:476 - Tool execution error: 
+2025-09-11 16:23:09 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: hi 
+2025-09-11 16:23:09 | INFO     | app.mcp_client:process_query_stream:517 - Processing streaming query: hi 
+2025-09-11 16:23:14 | INFO     | app.mcp_client:process_query_stream:555 - Gemini response (iteration 1): Hi!  How can I help you today with your soccer analytics needs?
+...
+2025-09-11 16:23:18 | INFO     | app.mcp_client:execute_tool:447 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-11 16:23:18 | ERROR    | app.mcp_client:execute_tool:476 - Tool execution error: 
+2025-09-11 16:24:28 | INFO     | app.mcp_client:cleanup:703 - Streams closed
+2025-09-11 16:24:28 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 16:24:31 | INFO     | app.mcp_client:__init__:356 - SoccerMCPClient initialized
+2025-09-11 16:24:31 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 16:24:31 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 16:24:31 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 16:24:33 | INFO     | app.mcp_client:__init__:356 - SoccerMCPClient initialized
+2025-09-11 16:24:33 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 16:24:33 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 16:24:44 | INFO     | app.mcp_client:connect_to_server:361 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-11 16:24:46 | ERROR    | app.mcp_client:connect_to_server:394 - Failed to connect to MCP server: 
+2025-09-11 16:24:46 | INFO     | app.mcp_client:execute_tool:447 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-11 16:24:46 | ERROR    | app.mcp_client:execute_tool:477 - Tool execution error: 
+2025-09-11 16:25:12 | INFO     | app.mcp_client:execute_tool:447 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-11 16:25:12 | ERROR    | app.mcp_client:execute_tool:477 - Tool execution error: 
+2025-09-11 16:25:14 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Show me Barcelona Stats for Season 2022-2023 in La Liga
+2025-09-11 16:25:14 | INFO     | app.mcp_client:process_query_stream:518 - Processing streaming query: Show me Barcelona Stats for Season 2022-2023 in La Liga
+2025-09-11 16:25:22 | INFO     | app.mcp_client:process_query_stream:556 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "get_team_season_stats", "parameters": {"team": "Barcelona", "season"...
+2025-09-11 16:25:22 | INFO     | app.mcp_client:execute_tool:447 - Executing tool: soccerdata-mcp:get_team_season_stats with params: {'team': 'Barcelona', 'season': '2022-2023', 'league': 'ESP-La Liga'}
+2025-09-11 16:25:22 | ERROR    | app.mcp_client:execute_tool:477 - Tool execution error: 
+2025-09-11 16:25:22 | INFO     | app.mcp_client:process_query_stream:589 - Tool executed successfully: soccerdata-mcp:get_team_season_stats
+2025-09-11 16:25:35 | INFO     | app.mcp_client:process_query_stream:556 - Gemini response (iteration 2): The provided data from `soccerdata-mcp:get_team_season_stats` indicates there was no error retrievin...
+2025-09-11 16:25:40 | INFO     | app.mcp_client:execute_tool:447 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-11 16:25:40 | ERROR    | app.mcp_client:execute_tool:477 - Tool execution error: 
+2025-09-11 16:29:26 | INFO     | app.mcp_client:execute_tool:447 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-11 16:29:26 | ERROR    | app.mcp_client:execute_tool:477 - Tool execution error: 
+2025-09-11 16:29:44 | INFO     | app.mcp_client:cleanup:704 - Streams closed
+2025-09-11 16:29:44 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 16:30:29 | INFO     | app.mcp_client:__init__:356 - SoccerMCPClient initialized
+2025-09-11 16:30:29 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 16:30:29 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 16:31:43 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 16:31:48 | INFO     | app.mcp_client:__init__:356 - SoccerMCPClient initialized
+2025-09-11 16:31:48 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 16:31:48 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 16:36:12 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 16:36:14 | INFO     | app.mcp_client:__init__:25 - SoccerMCPClient initialized
+2025-09-11 16:36:14 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 16:36:14 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 16:36:26 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 16:37:03 | INFO     | app.mcp_client:__init__:25 - SoccerMCPClient initialized
+2025-09-11 16:37:03 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 16:37:03 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 16:50:07 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: What leagues are available?
+2025-09-11 16:50:07 | INFO     | app.mcp_client:process_query_stream:154 - Processing streaming query: What leagues are available?
+2025-09-11 16:50:08 | INFO     | app.mcp_client:connect_to_server:30 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-11 16:50:09 | INFO     | app.mcp_client:connect_to_server:55 - Connected successfully! Available tools: 9
+2025-09-11 16:50:11 | INFO     | app.mcp_client:process_query_stream:192 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "available_leagues", "parameters": {}}}
+```
+...
+2025-09-11 16:50:11 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: available_leagues with params: {}
+2025-09-11 16:50:11 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 16:50:11 | INFO     | app.mcp_client:process_query_stream:225 - Tool executed successfully: available_leagues
+2025-09-11 16:50:12 | INFO     | app.mcp_client:process_query_stream:192 - Gemini response (iteration 2): ```json
+{"tool_call": {"name": "available_leagues", "parameters": {}}}
+```
+...
+2025-09-11 16:50:12 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: available_leagues with params: {}
+2025-09-11 16:50:12 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 16:50:12 | INFO     | app.mcp_client:process_query_stream:225 - Tool executed successfully: available_leagues
+2025-09-11 16:50:14 | INFO     | app.mcp_client:process_query_stream:192 - Gemini response (iteration 3): The provided data from `available_leagues` does not contain a list of leagues.  The response only in...
+2025-09-11 16:50:19 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-11 16:50:19 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 16:51:29 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 16:51:33 | INFO     | app.mcp_client:__init__:25 - SoccerMCPClient initialized
+2025-09-11 16:51:33 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 16:51:33 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 16:52:02 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Hi, what are the leagues available?
+2025-09-11 16:52:02 | INFO     | app.mcp_client:process_query_stream:154 - Processing streaming query: Hi, what are the leagues available?
+2025-09-11 16:52:02 | INFO     | app.mcp_client:connect_to_server:30 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-11 16:52:04 | INFO     | app.mcp_client:connect_to_server:55 - Connected successfully! Available tools: 9
+2025-09-11 16:52:05 | INFO     | app.mcp_client:process_query_stream:192 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "available_leagues", "parameters": {}}}
+```
+...
+2025-09-11 16:52:06 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: available_leagues with params: {}
+2025-09-11 16:52:06 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 16:52:06 | INFO     | app.mcp_client:process_query_stream:225 - Tool executed successfully: available_leagues
+2025-09-11 16:52:07 | INFO     | app.mcp_client:process_query_stream:192 - Gemini response (iteration 2): The available leagues information is not provided in the response from the `available_leagues` tool.  The response only indicates there was no error.  To get the list of available leagues, you need to provide the actual data returned by the `available_leagues` tool.  The current response is insufficient to answer the question.
+...
+2025-09-11 16:52:12 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-11 16:52:12 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 16:56:09 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 16:56:13 | INFO     | app.mcp_client:__init__:25 - SoccerMCPClient initialized
+2025-09-11 16:56:13 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 16:56:13 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 16:56:13 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 16:56:14 | INFO     | app.mcp_client:__init__:25 - SoccerMCPClient initialized
+2025-09-11 16:56:14 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 16:56:14 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 16:56:14 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 16:56:16 | INFO     | app.mcp_client:__init__:25 - SoccerMCPClient initialized
+2025-09-11 16:56:16 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 16:56:16 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 16:56:16 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 16:56:17 | INFO     | app.mcp_client:__init__:25 - SoccerMCPClient initialized
+2025-09-11 16:56:17 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 16:56:17 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 16:56:17 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 16:56:18 | INFO     | app.mcp_client:__init__:25 - SoccerMCPClient initialized
+2025-09-11 16:56:18 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 16:56:18 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 16:58:21 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 17:08:01 | INFO     | app.mcp_client:__init__:361 - SoccerMCPClient initialized
+2025-09-11 17:08:01 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 17:08:01 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 17:08:08 | INFO     | app.mcp_client:cleanup:813 - MCP session cleaned up
+2025-09-11 17:08:08 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 17:08:09 | INFO     | app.mcp_client:__init__:361 - SoccerMCPClient initialized
+2025-09-11 17:08:09 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 17:08:09 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 17:08:19 | INFO     | app.mcp_client:connect_to_server:404 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-11 17:08:20 | INFO     | app.mcp_client:_create_connection:377 - Session initialized: meta=None protocolVersion='2025-06-18' capabilities=ServerCapabilities(experimental={}, logging=None, prompts=PromptsCapability(listChanged=False), resources=ResourcesCapability(subscribe=False, listChanged=False), tools=ToolsCapability(listChanged=False), completions=None) serverInfo=Implementation(name='Soccerdata MCP Server', title=None, version='1.13.1') instructions=None
+2025-09-11 17:08:20 | ERROR    | app.mcp_client:connect_to_server:410 - Failed to connect to MCP server: 
+2025-09-11 17:08:43 | INFO     | app.mcp_client:connect_to_server:404 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-11 17:08:45 | INFO     | app.mcp_client:_create_connection:377 - Session initialized: meta=None protocolVersion='2025-06-18' capabilities=ServerCapabilities(experimental={}, logging=None, prompts=PromptsCapability(listChanged=False), resources=ResourcesCapability(subscribe=False, listChanged=False), tools=ToolsCapability(listChanged=False), completions=None) serverInfo=Implementation(name='Soccerdata MCP Server', title=None, version='1.13.1') instructions=None
+2025-09-11 17:08:45 | ERROR    | app.mcp_client:connect_to_server:410 - Failed to connect to MCP server: 
+2025-09-11 17:08:47 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: hii what leagues are available?
+2025-09-11 17:08:47 | INFO     | app.mcp_client:process_query_stream:569 - Processing streaming query: hii what leagues are available?
+2025-09-11 17:08:47 | INFO     | app.mcp_client:connect_to_server:404 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-11 17:08:49 | ERROR    | app.mcp_client:connect_to_server:410 - Failed to connect to MCP server: Connection closed
+2025-09-11 17:08:53 | INFO     | app.mcp_client:connect_to_server:404 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-11 17:08:55 | ERROR    | app.mcp_client:connect_to_server:410 - Failed to connect to MCP server: Connection closed
+2025-09-11 17:12:56 | INFO     | app.mcp_client:cleanup:813 - MCP session cleaned up
+2025-09-11 17:12:56 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 17:12:58 | INFO     | app.mcp_client:__init__:361 - SoccerMCPClient initialized
+2025-09-11 17:12:58 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 17:12:58 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 17:16:11 | INFO     | app.mcp_client:cleanup:813 - MCP session cleaned up
+2025-09-11 17:16:11 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 17:16:13 | INFO     | app.mcp_client:__init__:361 - SoccerMCPClient initialized
+2025-09-11 17:16:13 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 17:16:13 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 17:16:23 | INFO     | app.mcp_client:connect_to_server:404 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-11 17:16:25 | INFO     | app.mcp_client:_create_connection:377 - Session initialized: meta=None protocolVersion='2025-06-18' capabilities=ServerCapabilities(experimental={}, logging=None, prompts=PromptsCapability(listChanged=False), resources=ResourcesCapability(subscribe=False, listChanged=False), tools=ToolsCapability(listChanged=False), completions=None) serverInfo=Implementation(name='Soccerdata MCP Server', title=None, version='1.13.1') instructions=None
+2025-09-11 17:16:25 | ERROR    | app.mcp_client:connect_to_server:413 - Failed to connect to MCP server: 
+2025-09-11 17:16:41 | INFO     | app.mcp_client:connect_to_server:404 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-11 17:16:43 | INFO     | app.mcp_client:_create_connection:377 - Session initialized: meta=None protocolVersion='2025-06-18' capabilities=ServerCapabilities(experimental={}, logging=None, prompts=PromptsCapability(listChanged=False), resources=ResourcesCapability(subscribe=False, listChanged=False), tools=ToolsCapability(listChanged=False), completions=None) serverInfo=Implementation(name='Soccerdata MCP Server', title=None, version='1.13.1') instructions=None
+2025-09-11 17:16:43 | ERROR    | app.mcp_client:connect_to_server:413 - Failed to connect to MCP server: 
+2025-09-11 17:16:45 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: hiii, what are the leagues available?
+2025-09-11 17:16:45 | INFO     | app.mcp_client:process_query_stream:572 - Processing streaming query: hiii, what are the leagues available?
+2025-09-11 17:16:45 | INFO     | app.mcp_client:connect_to_server:404 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-11 17:16:47 | ERROR    | app.mcp_client:connect_to_server:413 - Failed to connect to MCP server: Connection closed
+2025-09-11 17:16:51 | INFO     | app.mcp_client:connect_to_server:404 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-11 17:16:53 | ERROR    | app.mcp_client:connect_to_server:413 - Failed to connect to MCP server: Connection closed
+2025-09-11 17:22:02 | INFO     | app.main:process_query:88 - Received non-streaming query: {"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"player": "Lionel Messi", "stat_type": "standard"}}}
+2025-09-11 17:22:02 | INFO     | app.mcp_client:process_query:724 - Processing query: {"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"player": "Lionel Messi", "stat_type": "standard"}}}
+2025-09-11 17:22:02 | INFO     | app.mcp_client:connect_to_server:404 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-11 17:22:06 | INFO     | app.mcp_client:_create_connection:377 - Session initialized: meta=None protocolVersion='2025-06-18' capabilities=ServerCapabilities(experimental={}, logging=None, prompts=PromptsCapability(listChanged=False), resources=ResourcesCapability(subscribe=False, listChanged=False), tools=ToolsCapability(listChanged=False), completions=None) serverInfo=Implementation(name='Soccerdata MCP Server', title=None, version='1.13.1') instructions=None
+2025-09-11 17:22:06 | ERROR    | app.mcp_client:connect_to_server:413 - Failed to connect to MCP server: 
+2025-09-11 17:22:06 | INFO     | app.main:process_query:96 - Query processed successfully
+2025-09-11 17:22:29 | INFO     | app.mcp_client:cleanup:816 - MCP session cleaned up
+2025-09-11 17:22:29 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 17:22:31 | INFO     | app.mcp_client:__init__:25 - SoccerMCPClient initialized
+2025-09-11 17:22:31 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 17:22:31 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 17:22:37 | INFO     | app.main:process_query:88 - Received non-streaming query: {"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"player": "Lionel Messi", "stat_type": "standard"}}}
+2025-09-11 17:22:37 | INFO     | app.mcp_client:process_query:263 - Processing query: {"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"player": "Lionel Messi", "stat_type": "standard"}}}
+2025-09-11 17:22:37 | INFO     | app.mcp_client:connect_to_server:30 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-11 17:22:40 | INFO     | app.mcp_client:connect_to_server:55 - Connected successfully! Available tools: 9
+2025-09-11 17:22:53 | INFO     | app.mcp_client:process_query:282 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"player": "Lionel Messi", "stat_type": "standard"}}}
+```
+...
+2025-09-11 17:22:53 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: get_player_season_stats_filtered with params: {'player': 'Lionel Messi', 'stat_type': 'standard'}
+2025-09-11 17:22:53 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 17:22:53 | INFO     | app.mcp_client:process_query:298 - Tool executed successfully: get_player_season_stats_filtered
+2025-09-11 17:23:16 | INFO     | app.mcp_client:process_query:282 - Gemini response (iteration 2): The provided tool call `get_player_season_stats_filtered` for Lionel Messi with `stat_type: "standard"` returned an empty error message.  This suggests the tool successfully executed but didn't find a...
+2025-09-11 17:23:16 | INFO     | app.main:process_query:96 - Query processed successfully
+2025-09-11 17:24:29 | INFO     | app.main:process_query:88 - Received non-streaming query: {"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"team": "Barcelona", "player": " lionel Messi", "season": "1112", "league_id": "ESP-La Liga", "stat_type": "standard"}}}
+2025-09-11 17:24:29 | INFO     | app.mcp_client:process_query:263 - Processing query: {"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"team": "Barcelona", "player": " lionel Messi", "season": "1112", "league_id": "ESP-La Liga", "stat_type": "standard"}}}
+2025-09-11 17:24:29 | ERROR    | app.mcp_client:call_gemini:91 - Gemini API call failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 29
+}
+]
+2025-09-11 17:24:29 | INFO     | app.mcp_client:process_query:282 - Gemini response (iteration 1): Error calling Gemini API: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limit...
+2025-09-11 17:24:29 | INFO     | app.main:process_query:96 - Query processed successfully
+2025-09-11 17:26:58 | INFO     | app.main:process_query:88 - Received non-streaming query: {"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"team": "Barcelona", "player": " lionel Messi", "season": "1112", "league_id": "ESP-La Liga", "stat_type": "standard"}}}
+2025-09-11 17:26:58 | INFO     | app.mcp_client:process_query:263 - Processing query: {"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"team": "Barcelona", "player": " lionel Messi", "season": "1112", "league_id": "ESP-La Liga", "stat_type": "standard"}}}
+2025-09-11 17:26:59 | ERROR    | app.mcp_client:call_gemini:91 - Gemini API call failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+}
+]
+2025-09-11 17:26:59 | INFO     | app.mcp_client:process_query:282 - Gemini response (iteration 1): Error calling Gemini API: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limit...
+2025-09-11 17:26:59 | INFO     | app.main:process_query:96 - Query processed successfully
+2025-09-11 17:27:30 | INFO     | app.main:process_query:88 - Received non-streaming query: {"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"team": "Barcelona", "player": " lionel Messi", "season": "1112", "league_id": "ESP-La Liga", "stat_type": "standard"}}}
+2025-09-11 17:27:30 | INFO     | app.mcp_client:process_query:263 - Processing query: {"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"team": "Barcelona", "player": " lionel Messi", "season": "1112", "league_id": "ESP-La Liga", "stat_type": "standard"}}}
+2025-09-11 17:27:31 | INFO     | app.mcp_client:process_query:282 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"team": "Barcelona", "player": "Lionel Messi", "season": "1112", "league_id": "ESP-La Liga", "stat_type": "standard"}}...
+2025-09-11 17:27:31 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: get_player_season_stats_filtered with params: {'team': 'Barcelona', 'player': 'Lionel Messi', 'season': '1112', 'league_id': 'ESP-La Liga', 'stat_type': 'standard'}
+2025-09-11 17:27:31 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 17:27:31 | INFO     | app.mcp_client:process_query:298 - Tool executed successfully: get_player_season_stats_filtered
+2025-09-11 17:27:32 | ERROR    | app.mcp_client:call_gemini:91 - Gemini API call failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 27
+}
+]
+2025-09-11 17:27:32 | INFO     | app.mcp_client:process_query:282 - Gemini response (iteration 2): Error calling Gemini API: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limit...
+2025-09-11 17:27:32 | INFO     | app.main:process_query:96 - Query processed successfully
+2025-09-11 17:29:10 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 17:29:15 | INFO     | app.mcp_client:__init__:25 - SoccerMCPClient initialized
+2025-09-11 17:29:15 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 17:29:15 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 17:29:24 | INFO     | app.main:process_query:88 - Received non-streaming query: {"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"team": "Barcelona", "player": " lionel Messi", "season": "1112", "league_id": "ESP-La Liga", "stat_type": "standard"}}}
+2025-09-11 17:29:24 | INFO     | app.mcp_client:process_query:263 - Processing query: {"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"team": "Barcelona", "player": " lionel Messi", "season": "1112", "league_id": "ESP-La Liga", "stat_type": "standard"}}}
+2025-09-11 17:29:24 | INFO     | app.mcp_client:connect_to_server:30 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-11 17:29:27 | INFO     | app.mcp_client:connect_to_server:55 - Connected successfully! Available tools: 9
+2025-09-11 17:29:29 | INFO     | app.mcp_client:process_query:282 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"team": "Barcelona", "player": "Lionel Messi", "season": "1112", "league_id": "ESP-La Liga", "stat_type": "standard"}}...
+2025-09-11 17:29:29 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: get_player_season_stats_filtered with params: {'team': 'Barcelona', 'player': 'Lionel Messi', 'season': '1112', 'league_id': 'ESP-La Liga', 'stat_type': 'standard'}
+2025-09-11 17:29:29 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 17:29:29 | INFO     | app.mcp_client:process_query:298 - Tool executed successfully: get_player_season_stats_filtered
+2025-09-11 17:29:32 | INFO     | app.mcp_client:process_query:282 - Gemini response (iteration 2): The provided data shows that the `get_player_season_stats_filtered` tool was called to retrieve Lionel Messi's standard statistics for Barcelona during the 2011-2012 season in La Liga.  The tool retur...
+2025-09-11 17:29:32 | INFO     | app.main:process_query:96 - Query processed successfully
+2025-09-11 17:31:41 | INFO     | app.main:process_query:88 - Received non-streaming query: {"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"team": "Barcelona", "player": "lionel Messi", "season": "1718", "league_id": "ESP-La Liga", "stat_type": "standard"}}}
+2025-09-11 17:31:41 | INFO     | app.mcp_client:process_query:263 - Processing query: {"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"team": "Barcelona", "player": "lionel Messi", "season": "1718", "league_id": "ESP-La Liga", "stat_type": "standard"}}}
+2025-09-11 17:31:45 | INFO     | app.mcp_client:process_query:282 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"team": "Barcelona", "player": "Lionel Messi", "season": "1718", "league_id": "ESP-La Liga", "stat_type": "standard"}}...
+2025-09-11 17:31:45 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: get_player_season_stats_filtered with params: {'team': 'Barcelona', 'player': 'Lionel Messi', 'season': '1718', 'league_id': 'ESP-La Liga', 'stat_type': 'standard'}
+2025-09-11 17:31:45 | ERROR    | app.mcp_client:execute_tool:118 - Tool execution error: 
+2025-09-11 17:31:45 | INFO     | app.mcp_client:process_query:298 - Tool executed successfully: get_player_season_stats_filtered
+2025-09-11 17:31:46 | INFO     | app.mcp_client:process_query:282 - Gemini response (iteration 2): The provided data indicates that the `get_player_season_stats_filtered` tool was called successfully, with no errors reported.  However, the tool's response lacks the actual statistics for Lionel Mess...
+2025-09-11 17:31:46 | INFO     | app.main:process_query:96 - Query processed successfully
+2025-09-11 17:34:35 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 17:34:39 | INFO     | app.mcp_client:__init__:25 - SoccerMCPClient initialized
+2025-09-11 17:34:39 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 17:34:39 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 17:39:40 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 17:39:44 | INFO     | app.mcp_client:__init__:25 - SoccerMCPClient initialized
+2025-09-11 17:39:44 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 17:39:44 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 17:39:49 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 17:39:52 | INFO     | app.mcp_client:__init__:25 - SoccerMCPClient initialized
+2025-09-11 17:39:52 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 17:39:52 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 17:39:57 | INFO     | app.main:process_query:88 - Received non-streaming query: {"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"team": "Barcelona", "player": "lionel Messi", "season": "1718", "league_id": "ESP-La Liga", "stat_type": "standard"}}}
+2025-09-11 17:39:57 | INFO     | app.mcp_client:process_query:265 - Processing query: {"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"team": "Barcelona", "player": "lionel Messi", "season": "1718", "league_id": "ESP-La Liga", "stat_type": "standard"}}}
+2025-09-11 17:39:57 | INFO     | app.mcp_client:connect_to_server:30 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-11 17:40:00 | INFO     | app.mcp_client:connect_to_server:55 - Connected successfully! Available tools: 9
+2025-09-11 17:40:02 | INFO     | app.mcp_client:process_query:284 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"team": "Barcelona", "player": "Lionel Messi", "season": "1718", "league_id": "ESP-La Liga", "stat_type": "standard"}}...
+2025-09-11 17:40:02 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: get_player_season_stats_filtered with params: {'team': 'Barcelona', 'player': 'Lionel Messi', 'season': '1718', 'league_id': 'ESP-La Liga', 'stat_type': 'standard'}
+2025-09-11 17:40:02 | ERROR    | app.mcp_client:execute_tool:120 - Tool execution error: 
+2025-09-11 17:40:02 | INFO     | app.mcp_client:process_query:300 - Tool executed successfully: get_player_season_stats_filtered
+2025-09-11 17:40:04 | INFO     | app.mcp_client:process_query:284 - Gemini response (iteration 2): The provided data shows that the `get_player_season_stats_filtered` tool was called to retrieve Lionel Messi's standard statistics for Barcelona during the 2017-2018 La Liga season.  The tool returned...
+2025-09-11 17:40:04 | INFO     | app.main:process_query:96 - Query processed successfully
+2025-09-11 17:40:48 | INFO     | app.main:process_query:88 - Received non-streaming query: {"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"team": "Barcelona", "player": "Messi", "season": "1718", "league_id": "ESP-La Liga", "stat_type": "standard"}}}
+2025-09-11 17:40:48 | INFO     | app.mcp_client:process_query:265 - Processing query: {"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"team": "Barcelona", "player": "Messi", "season": "1718", "league_id": "ESP-La Liga", "stat_type": "standard"}}}
+2025-09-11 17:40:50 | INFO     | app.mcp_client:process_query:284 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"team": "Barcelona", "player": "Messi", "season": "1718", "league_id": "ESP-La Liga", "stat_type": "standard"}}}
+```
+...
+2025-09-11 17:40:50 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: get_player_season_stats_filtered with params: {'team': 'Barcelona', 'player': 'Messi', 'season': '1718', 'league_id': 'ESP-La Liga', 'stat_type': 'standard'}
+2025-09-11 17:40:50 | ERROR    | app.mcp_client:execute_tool:120 - Tool execution error: 
+2025-09-11 17:40:50 | INFO     | app.mcp_client:process_query:300 - Tool executed successfully: get_player_season_stats_filtered
+2025-09-11 17:40:54 | INFO     | app.mcp_client:process_query:284 - Gemini response (iteration 2): The provided data indicates that the `get_player_season_stats_filtered` tool call was successful, but returned an empty error string. This suggests that the tool found no data matching the specified c...
+2025-09-11 17:40:54 | INFO     | app.main:process_query:96 - Query processed successfully
+2025-09-11 17:41:25 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-11 17:41:25 | ERROR    | app.mcp_client:execute_tool:120 - Tool execution error: 
+2025-09-11 17:41:52 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-11 17:41:52 | ERROR    | app.mcp_client:execute_tool:120 - Tool execution error: 
+2025-09-11 17:41:54 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Request
+
+{
+  `team`: `Barcelona`,
+  `player`: `Messi`,
+  `season`: `1112`,
+  `league_id`: `ESP-La Liga`,
+  `stat_type`: `standard`
+}
+2025-09-11 17:41:54 | INFO     | app.mcp_client:process_query_stream:156 - Processing streaming query: Request
+
+{
+  `team`: `Barcelona`,
+  `player`: `Messi`,
+  `season`: `1112`,
+  `league_id`: `ESP-La Liga`,
+  `stat_type`: `standard`
+}
+2025-09-11 17:42:01 | INFO     | app.mcp_client:process_query_stream:194 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"team": "Barcelona", "player": "Messi", "season": "1112", "league_id": "ESP-La Liga", "stat_type": "standard"}}}
+```
+...
+2025-09-11 17:42:01 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: get_player_season_stats_filtered with params: {'team': 'Barcelona', 'player': 'Messi', 'season': '1112', 'league_id': 'ESP-La Liga', 'stat_type': 'standard'}
+2025-09-11 17:42:01 | ERROR    | app.mcp_client:execute_tool:120 - Tool execution error: 
+2025-09-11 17:42:01 | INFO     | app.mcp_client:process_query_stream:227 - Tool executed successfully: get_player_season_stats_filtered
+2025-09-11 17:42:04 | INFO     | app.mcp_client:process_query_stream:194 - Gemini response (iteration 2): The provided data shows that the `get_player_season_stats_filtered` tool was called with parameters specifying Barcelona, Messi, the 2011-2012 season, the Spanish La Liga, and standard statistics.  The tool returned no error, implying that it successfully processed the request, but did not return any data.  This could mean one of the following:
+
+* **No data exists:**  There might be no data available for Messi's statistics in the specified season and league within the data source.
+* **Data access issue:** While the tool didn't return an explicit error, there might be a problem accessing the relevant data files or database.
+* **Data formatting:** The data might exist but the tool's filtering criteria or data formatting is preventing successful retrieval of player stats.
+
+To investigate further, I would need additional information or more refined tools.  For instance, it might be helpful to check if data exists for other players from Barcelona in that season using the same tool, or to ex...
+2025-09-11 17:42:12 | INFO     | app.mcp_client:execute_tool:100 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-11 17:42:12 | ERROR    | app.mcp_client:execute_tool:120 - Tool execution error: 
+2025-09-11 18:05:54 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 18:05:59 | INFO     | app.mcp_client:__init__:356 - SoccerMCPClient initialized
+2025-09-11 18:05:59 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 18:05:59 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 18:06:22 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: What leagues are available?
+2025-09-11 18:06:22 | INFO     | app.mcp_client:process_query_stream:484 - Processing streaming query: What leagues are available?
+2025-09-11 18:06:22 | INFO     | app.mcp_client:connect_to_server:361 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-11 18:06:24 | INFO     | app.mcp_client:connect_to_server:386 - Connected successfully! Available tools: 9
+2025-09-11 18:06:26 | INFO     | app.mcp_client:process_query_stream:521 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "available_leagues", "parameters": {}}}
+```
+...
+2025-09-11 18:06:26 | INFO     | app.mcp_client:execute_tool:431 - Executing tool: available_leagues with params: {}
+2025-09-11 18:06:26 | ERROR    | app.mcp_client:execute_tool:454 - Tool execution error: 
+2025-09-11 18:06:26 | INFO     | app.mcp_client:process_query_stream:557 - Tool executed successfully: available_leagues
+2025-09-11 18:06:28 | INFO     | app.mcp_client:process_query_stream:521 - Gemini response (iteration 2): The provided data from `available_leagues` does not contain a list of leagues.  The response only indicates that there was no error in the tool execution, but it lacks the actual league data.  Therefore, I cannot answer the question "What leagues are available?" with the information given.  To get the answer, I need to execute the `available_leagues` tool and ensure it returns the list of leagues.
+...
+2025-09-11 18:06:33 | INFO     | app.mcp_client:execute_tool:431 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-11 18:06:33 | ERROR    | app.mcp_client:execute_tool:454 - Tool execution error: 
+2025-09-11 18:08:41 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 18:08:45 | INFO     | app.mcp_client:__init__:356 - SoccerMCPClient initialized
+2025-09-11 18:08:45 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 18:08:45 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 18:09:33 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 18:09:35 | INFO     | app.mcp_client:__init__:356 - SoccerMCPClient initialized
+2025-09-11 18:09:35 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 18:09:35 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 18:09:42 | ERROR    | app.main:get_leagues:169 - Failed to get leagues: 'SoccerMCPClient' object has no attribute 'get_available_leagues'
+2025-09-11 18:09:56 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 18:09:57 | INFO     | app.mcp_client:__init__:356 - SoccerMCPClient initialized
+2025-09-11 18:09:57 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 18:09:57 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 18:11:21 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 18:11:22 | INFO     | app.mcp_client:__init__:356 - SoccerMCPClient initialized
+2025-09-11 18:11:22 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 18:11:22 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 18:11:45 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: What leagues are available?
+2025-09-11 18:11:45 | INFO     | app.mcp_client:process_query_stream:484 - Processing streaming query: What leagues are available?
+2025-09-11 18:11:45 | INFO     | app.mcp_client:connect_to_server:361 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-11 18:11:47 | INFO     | app.mcp_client:connect_to_server:386 - Connected successfully! Available tools: 9
+2025-09-11 18:11:52 | INFO     | app.mcp_client:process_query_stream:521 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "available_leagues", "parameters": {}}}
+```
+...
+2025-09-11 18:11:52 | INFO     | app.mcp_client:execute_tool:431 - Executing tool: available_leagues with params: {}
+2025-09-11 18:11:52 | ERROR    | app.mcp_client:execute_tool:454 - Tool execution error: 
+2025-09-11 18:11:52 | INFO     | app.mcp_client:process_query_stream:557 - Tool executed successfully: available_leagues
+2025-09-11 18:11:54 | INFO     | app.mcp_client:process_query_stream:521 - Gemini response (iteration 2): ```json
+{"tool_call": {"name": "available_leagues", "parameters": {}}}
+```
+...
+2025-09-11 18:11:54 | INFO     | app.mcp_client:execute_tool:431 - Executing tool: available_leagues with params: {}
+2025-09-11 18:11:54 | ERROR    | app.mcp_client:execute_tool:454 - Tool execution error: 
+2025-09-11 18:11:54 | INFO     | app.mcp_client:process_query_stream:557 - Tool executed successfully: available_leagues
+2025-09-11 18:11:56 | INFO     | app.mcp_client:process_query_stream:521 - Gemini response (iteration 3): The provided data from `available_leagues` does not contain a list of leagues.  The response only indicates that there was no error in the tool execution, but no actual league data was returned.  Therefore, I cannot answer the question "What leagues are available?"  More information is needed from the `available_leagues` tool.
+...
+2025-09-11 18:12:02 | INFO     | app.mcp_client:execute_tool:431 - Executing tool: available_leagues with params: {}
+2025-09-11 18:12:02 | ERROR    | app.mcp_client:execute_tool:454 - Tool execution error: 
+2025-09-11 19:41:16 | INFO     | app.mcp_client:execute_tool:431 - Executing tool: available_leagues with params: {}
+2025-09-11 19:41:17 | ERROR    | app.mcp_client:execute_tool:454 - Tool execution error: 
+2025-09-11 19:41:17 | INFO     | app.mcp_client:execute_tool:431 - Executing tool: available_leagues with params: {}
+2025-09-11 19:41:17 | ERROR    | app.mcp_client:execute_tool:454 - Tool execution error: 
+2025-09-11 21:29:37 | INFO     | app.mcp_client:execute_tool:431 - Executing tool: available_leagues with params: {}
+2025-09-11 21:29:37 | ERROR    | app.mcp_client:execute_tool:454 - Tool execution error: 
+2025-09-11 21:29:37 | INFO     | app.mcp_client:execute_tool:431 - Executing tool: available_leagues with params: {}
+2025-09-11 21:29:37 | ERROR    | app.mcp_client:execute_tool:454 - Tool execution error: 
+2025-09-11 21:29:39 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 21:29:43 | INFO     | app.mcp_client:__init__:356 - SoccerMCPClient initialized
+2025-09-11 21:29:43 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 21:29:43 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 21:29:43 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-11 21:29:45 | INFO     | app.mcp_client:__init__:356 - SoccerMCPClient initialized
+2025-09-11 21:29:45 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-11 21:29:45 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-11 21:30:08 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-12 02:18:51 | INFO     | app.mcp_client:__init__:356 - SoccerMCPClient initialized
+2025-09-12 02:18:51 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-12 02:18:51 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-12 02:19:29 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: What are the leagues available?
+2025-09-12 02:19:29 | INFO     | app.mcp_client:process_query_stream:484 - Processing streaming query: What are the leagues available?
+2025-09-12 02:19:29 | INFO     | app.mcp_client:connect_to_server:361 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-12 02:19:31 | INFO     | app.mcp_client:connect_to_server:386 - Connected successfully! Available tools: 9
+2025-09-12 02:19:32 | INFO     | app.mcp_client:process_query_stream:521 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "available_leagues", "parameters": {}}}
+```
+...
+2025-09-12 02:19:32 | INFO     | app.mcp_client:execute_tool:431 - Executing tool: available_leagues with params: {}
+2025-09-12 02:19:32 | ERROR    | app.mcp_client:execute_tool:454 - Tool execution error: 
+2025-09-12 02:19:33 | INFO     | app.mcp_client:process_query_stream:557 - Tool executed successfully: available_leagues
+2025-09-12 02:19:33 | INFO     | app.mcp_client:process_query_stream:521 - Gemini response (iteration 2): ```json
+{"tool_call": {"name": "available_leagues", "parameters": {}}}
+```
+...
+2025-09-12 02:19:33 | INFO     | app.mcp_client:execute_tool:431 - Executing tool: available_leagues with params: {}
+2025-09-12 02:19:33 | ERROR    | app.mcp_client:execute_tool:454 - Tool execution error: 
+2025-09-12 02:19:33 | INFO     | app.mcp_client:process_query_stream:557 - Tool executed successfully: available_leagues
+2025-09-12 02:19:35 | INFO     | app.mcp_client:process_query_stream:521 - Gemini response (iteration 3): The provided data from `available_leagues` tool doesn't contain a list of leagues.  The response only indicates that there was no error.  Therefore, I cannot answer the question about what leagues are available.  To get the list of leagues, please provide the output of a successful `available_leagues` call containing the list of leagues.
+...
+2025-09-12 02:19:40 | INFO     | app.mcp_client:execute_tool:431 - Executing tool: available_leagues with params: {}
+2025-09-12 02:19:40 | ERROR    | app.mcp_client:execute_tool:454 - Tool execution error: 
+2025-09-12 02:26:10 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-12 02:26:14 | INFO     | app.mcp_client:__init__:360 - SoccerMCPClient initialized
+2025-09-12 02:26:14 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-12 02:26:14 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-12 02:26:38 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Hii? 
+2025-09-12 02:26:38 | INFO     | app.mcp_client:process_query_stream:500 - Processing streaming query: Hii? 
+2025-09-12 02:26:38 | INFO     | app.mcp_client:connect_to_server:367 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-12 02:26:40 | INFO     | app.mcp_client:connect_to_server:397 - Connected! Tools: 9
+2025-09-12 02:26:41 | INFO     | app.mcp_client:process_query_stream:536 - Gemini response (iteration 1): Hi there! How can I help you today?
+...
+2025-09-12 02:26:45 | INFO     | app.mcp_client:execute_tool:443 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 02:26:45 | ERROR    | app.mcp_client:execute_tool:470 - Tool execution error: 
+2025-09-12 02:26:54 | INFO     | app.mcp_client:execute_tool:443 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 02:26:54 | ERROR    | app.mcp_client:execute_tool:470 - Tool execution error: 
+2025-09-12 02:26:56 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: What are the leagues available?
+2025-09-12 02:26:57 | INFO     | app.mcp_client:process_query_stream:500 - Processing streaming query: What are the leagues available?
+2025-09-12 02:26:57 | INFO     | app.mcp_client:process_query_stream:536 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "available_leagues", "parameters": {}}}
+```
+...
+2025-09-12 02:26:57 | INFO     | app.mcp_client:execute_tool:443 - Executing tool: available_leagues with params: {}
+2025-09-12 02:26:57 | ERROR    | app.mcp_client:execute_tool:470 - Tool execution error: 
+2025-09-12 02:26:58 | INFO     | app.mcp_client:process_query_stream:565 - Tool executed successfully: available_leagues
+2025-09-12 02:26:59 | INFO     | app.mcp_client:process_query_stream:536 - Gemini response (iteration 2): The provided data from `available_leagues` does not contain a list of leagues.  The response only in...
+2025-09-12 02:27:04 | INFO     | app.mcp_client:execute_tool:443 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 02:27:04 | ERROR    | app.mcp_client:execute_tool:470 - Tool execution error: 
+2025-09-12 02:31:53 | INFO     | app.mcp_client:cleanup:672 - MCP session closed
+2025-09-12 02:31:53 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-12 02:31:57 | INFO     | app.mcp_client:__init__:360 - SoccerMCPClient initialized
+2025-09-12 02:31:57 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-12 02:31:57 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-12 02:32:30 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: What leagues are available?
+2025-09-12 02:32:30 | INFO     | app.mcp_client:process_query_stream:500 - Processing streaming query: What leagues are available?
+2025-09-12 02:32:30 | INFO     | app.mcp_client:connect_to_server:367 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-12 02:32:32 | INFO     | app.mcp_client:connect_to_server:397 - Connected! Tools: 9
+2025-09-12 02:32:34 | INFO     | app.mcp_client:process_query_stream:536 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "available_leagues", "parameters": {}}}
+```
+...
+2025-09-12 02:32:35 | INFO     | app.mcp_client:execute_tool:443 - Executing tool: available_leagues with params: {}
+2025-09-12 02:32:35 | INFO     | app.mcp_client:process_query_stream:565 - Tool executed successfully: available_leagues
+2025-09-12 02:32:36 | INFO     | app.mcp_client:process_query_stream:536 - Gemini response (iteration 2): The available leagues in the database are:  "Big 5 European Leagues Combined", "ENG-Premier League",...
+2025-09-12 02:32:40 | INFO     | app.mcp_client:execute_tool:443 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 02:32:40 | ERROR    | app.mcp_client:execute_tool:470 - Tool execution error: 
+2025-09-12 02:33:27 | INFO     | app.mcp_client:execute_tool:443 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 02:33:27 | ERROR    | app.mcp_client:execute_tool:470 - Tool execution error: 
+2025-09-12 02:33:29 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: I want Messi stats for Barcelona in La liga season 2006-2007, standard stats
+2025-09-12 02:33:29 | INFO     | app.mcp_client:process_query_stream:500 - Processing streaming query: I want Messi stats for Barcelona in La liga season 2006-2007, standard stats
+2025-09-12 02:33:31 | INFO     | app.mcp_client:process_query_stream:536 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"player_name": "Li...
+2025-09-12 02:33:31 | INFO     | app.mcp_client:execute_tool:443 - Executing tool: get_player_season_stats_filtered with params: {'player_name': 'Lionel Messi', 'team_name': 'Barcelona', 'league_name': 'La Liga', 'season_name': '2006-2007'}
+2025-09-12 02:33:31 | ERROR    | app.mcp_client:execute_tool:470 - Tool execution error: 
+2025-09-12 02:33:31 | INFO     | app.mcp_client:process_query_stream:565 - Tool executed successfully: get_player_season_stats_filtered
+2025-09-12 02:33:33 | INFO     | app.mcp_client:process_query_stream:536 - Gemini response (iteration 2): The provided tool response indicates that the `get_player_season_stats_filtered` tool did not encoun...
+2025-09-12 02:33:33 | INFO     | app.mcp_client:execute_tool:443 - Executing tool: get_player_season_stats_filtered with params: {'player_name': 'Lionel Messi', 'team_name': 'Barcelona', 'league_name': 'La Liga', 'season_name': '2006-2007'}
+2025-09-12 02:33:33 | ERROR    | app.mcp_client:execute_tool:470 - Tool execution error: 
+2025-09-12 02:33:33 | INFO     | app.mcp_client:process_query_stream:565 - Tool executed successfully: get_player_season_stats_filtered
+2025-09-12 02:33:35 | INFO     | app.mcp_client:process_query_stream:536 - Gemini response (iteration 3): The provided tool calls to `get_player_season_stats_filtered` returned an empty error string, which ...
+2025-09-12 02:33:35 | INFO     | app.mcp_client:execute_tool:443 - Executing tool: get_player_season_stats_filtered with params: {'player_name': 'Lionel Messi', 'team_name': 'Barcelona', 'league_name': 'La Liga', 'season': '2006-2007'}
+2025-09-12 02:33:35 | ERROR    | app.mcp_client:execute_tool:470 - Tool execution error: 
+2025-09-12 02:33:35 | INFO     | app.mcp_client:process_query_stream:565 - Tool executed successfully: get_player_season_stats_filtered
+2025-09-12 02:33:40 | INFO     | app.mcp_client:execute_tool:443 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 02:33:40 | ERROR    | app.mcp_client:execute_tool:470 - Tool execution error: 
+2025-09-12 02:34:30 | INFO     | app.mcp_client:execute_tool:443 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 02:34:30 | ERROR    | app.mcp_client:execute_tool:470 - Tool execution error: 
+2025-09-12 02:34:32 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: I want Lionel Messi stats for Barcelona in ESP-La liga season 67, standard stats
+
+
+2025-09-12 02:34:32 | INFO     | app.mcp_client:process_query_stream:500 - Processing streaming query: I want Lionel Messi stats for Barcelona in ESP-La liga season 67, standard stats
+
+
+2025-09-12 02:34:33 | INFO     | app.mcp_client:process_query_stream:536 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"player_name": "Li...
+2025-09-12 02:34:33 | INFO     | app.mcp_client:execute_tool:443 - Executing tool: get_player_season_stats_filtered with params: {'player_name': 'Lionel Messi', 'team_name': 'Barcelona', 'league': 'ESP-La liga', 'season': 67, 'stat_types': ['standard']}
+2025-09-12 02:34:33 | ERROR    | app.mcp_client:execute_tool:470 - Tool execution error: 
+2025-09-12 02:34:33 | INFO     | app.mcp_client:process_query_stream:565 - Tool executed successfully: get_player_season_stats_filtered
+2025-09-12 02:34:34 | INFO     | app.mcp_client:process_query_stream:536 - Gemini response (iteration 2): The provided tool `get_player_season_stats_filtered` returned an empty error message, indicating it ...
+2025-09-12 02:34:40 | INFO     | app.mcp_client:execute_tool:443 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 02:34:40 | ERROR    | app.mcp_client:execute_tool:470 - Tool execution error: 
+2025-09-12 02:35:24 | INFO     | app.mcp_client:execute_tool:443 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 02:35:24 | ERROR    | app.mcp_client:execute_tool:470 - Tool execution error: 
+2025-09-12 02:35:26 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: I want Lionel Messi stats for Barcelona in ESP-La liga  season 2005-2006
+2025-09-12 02:35:27 | INFO     | app.mcp_client:process_query_stream:500 - Processing streaming query: I want Lionel Messi stats for Barcelona in ESP-La liga  season 2005-2006
+2025-09-12 02:35:28 | INFO     | app.mcp_client:process_query_stream:536 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"player_name": "Li...
+2025-09-12 02:35:28 | INFO     | app.mcp_client:execute_tool:443 - Executing tool: get_player_season_stats_filtered with params: {'player_name': 'Lionel Messi', 'team_name': 'Barcelona', 'league_name': 'ESP-La liga', 'season_name': '2005-2006'}
+2025-09-12 02:35:28 | ERROR    | app.mcp_client:execute_tool:470 - Tool execution error: 
+2025-09-12 02:35:28 | INFO     | app.mcp_client:process_query_stream:565 - Tool executed successfully: get_player_season_stats_filtered
+2025-09-12 02:35:29 | INFO     | app.mcp_client:process_query_stream:536 - Gemini response (iteration 2): The provided tool `get_player_season_stats_filtered` returned an empty error message, indicating tha...
+2025-09-12 02:35:35 | INFO     | app.mcp_client:execute_tool:443 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 02:35:35 | ERROR    | app.mcp_client:execute_tool:470 - Tool execution error: 
+2025-09-12 02:44:54 | INFO     | app.mcp_client:cleanup:672 - MCP session closed
+2025-09-12 02:44:54 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-12 02:44:58 | INFO     | app.mcp_client:__init__:360 - SoccerMCPClient initialized
+2025-09-12 02:44:58 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-12 02:44:58 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-12 02:45:50 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: hi, What are the leagues available?
+2025-09-12 02:45:50 | INFO     | app.mcp_client:process_query_stream:509 - Processing streaming query: hi, What are the leagues available?
+2025-09-12 02:45:51 | INFO     | app.mcp_client:connect_to_server:367 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-12 02:45:52 | INFO     | app.mcp_client:connect_to_server:397 - Connected! Tools: 9
+2025-09-12 02:45:53 | INFO     | app.mcp_client:process_query_stream:545 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "available_leagues", "parameters": {}}}
+```
+...
+2025-09-12 02:45:53 | INFO     | app.mcp_client:execute_tool:452 - Executing tool: available_leagues with params: {}
+2025-09-12 02:45:53 | INFO     | app.mcp_client:process_query_stream:574 - Tool executed successfully: available_leagues
+2025-09-12 02:45:55 | INFO     | app.mcp_client:process_query_stream:545 - Gemini response (iteration 2): The available leagues are: Big 5 European Leagues Combined, ENG-Premier League, ESP-La Liga, FRA-Lig...
+2025-09-12 02:45:59 | INFO     | app.mcp_client:execute_tool:452 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 02:45:59 | ERROR    | app.mcp_client:execute_tool:479 - Tool execution error: 
+2025-09-12 02:46:25 | INFO     | app.mcp_client:execute_tool:452 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 02:46:25 | ERROR    | app.mcp_client:execute_tool:479 - Tool execution error: 
+2025-09-12 02:46:27 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: I want Lionel Messi stats for Barcelona in ESP-La liga season 2005-2006?
+
+
+2025-09-12 02:46:27 | INFO     | app.mcp_client:process_query_stream:509 - Processing streaming query: I want Lionel Messi stats for Barcelona in ESP-La liga season 2005-2006?
+
+
+2025-09-12 02:46:28 | INFO     | app.mcp_client:process_query_stream:545 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"league_id": "ESP-...
+2025-09-12 02:46:28 | INFO     | app.mcp_client:execute_tool:452 - Executing tool: get_player_season_stats_filtered with params: {'league_id': 'ESP-La Liga', 'season': '0506', 'player': 'Messi', 'team': 'Barcelona', 'stat_type': 'standard'}
+2025-09-12 02:46:28 | ERROR    | app.mcp_client:execute_tool:479 - Tool execution error: 
+2025-09-12 02:46:28 | INFO     | app.mcp_client:process_query_stream:574 - Tool executed successfully: get_player_season_stats_filtered
+2025-09-12 02:46:31 | INFO     | app.mcp_client:process_query_stream:545 - Gemini response (iteration 2): ```json
+{"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"league_id": "ESP-...
+2025-09-12 02:46:31 | WARNING  | app.mcp_client:parse_gemini_response:499 - Failed to parse tool call: Extra data: line 2 column 1 (char 187)
+2025-09-12 02:46:38 | INFO     | app.mcp_client:execute_tool:452 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 02:46:38 | ERROR    | app.mcp_client:execute_tool:479 - Tool execution error: 
+2025-09-12 02:48:16 | INFO     | app.mcp_client:cleanup:681 - MCP session closed
+2025-09-12 02:48:16 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-12 02:48:20 | INFO     | app.mcp_client:__init__:360 - SoccerMCPClient initialized
+2025-09-12 02:48:20 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-12 02:48:20 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-12 02:48:46 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Show shooting stats for top players
+2025-09-12 02:48:46 | INFO     | app.mcp_client:process_query_stream:516 - Processing streaming query: Show shooting stats for top players
+2025-09-12 02:48:46 | INFO     | app.mcp_client:connect_to_server:367 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-12 02:48:48 | INFO     | app.mcp_client:connect_to_server:397 - Connected! Tools: 9
+2025-09-12 02:48:50 | INFO     | app.mcp_client:process_query_stream:552 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "available_leagues", "parameters": {}}}
+```
+...
+2025-09-12 02:48:50 | INFO     | app.mcp_client:execute_tool:452 - Executing tool: available_leagues with params: {}
+2025-09-12 02:48:50 | INFO     | app.mcp_client:process_query_stream:581 - Tool executed successfully: available_leagues
+2025-09-12 02:48:53 | INFO     | app.mcp_client:process_query_stream:552 - Gemini response (iteration 2): The query requests shooting stats for top players.  To fulfill this, we need to specify a league and...
+2025-09-12 02:48:53 | INFO     | app.mcp_client:execute_tool:452 - Executing tool: get_player_season_stats_filtered with params: {'league_id': 'ESP-La Liga', 'season': '0506', 'player': 'Messi', 'team': 'Barcelona', 'stat_type': 'standard'}
+2025-09-12 02:48:54 | INFO     | app.mcp_client:process_query_stream:581 - Tool executed successfully: get_player_season_stats_filtered
+2025-09-12 02:48:56 | INFO     | app.mcp_client:process_query_stream:552 - Gemini response (iteration 3): Based on the provided data, Lionel Messi's shooting statistics for the 2005-06 season in La Liga whi...
+2025-09-12 02:49:03 | INFO     | app.mcp_client:execute_tool:452 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 02:49:03 | ERROR    | app.mcp_client:execute_tool:486 - Tool execution error: 
+2025-09-12 02:51:16 | INFO     | app.mcp_client:execute_tool:452 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 02:51:16 | ERROR    | app.mcp_client:execute_tool:486 - Tool execution error: 
+2025-09-12 02:51:18 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: What are the leagues available?
+2025-09-12 02:51:19 | INFO     | app.mcp_client:process_query_stream:516 - Processing streaming query: What are the leagues available?
+2025-09-12 02:51:19 | INFO     | app.mcp_client:process_query_stream:552 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "available_leagues", "parameters": {}}}
+```
+...
+2025-09-12 02:51:19 | INFO     | app.mcp_client:execute_tool:452 - Executing tool: available_leagues with params: {}
+2025-09-12 02:51:19 | ERROR    | app.mcp_client:execute_tool:486 - Tool execution error: 
+2025-09-12 02:51:20 | INFO     | app.mcp_client:process_query_stream:581 - Tool executed successfully: available_leagues
+2025-09-12 02:51:21 | INFO     | app.mcp_client:process_query_stream:552 - Gemini response (iteration 2): ```json
+{"tool_call": {"name": "available_leagues", "parameters": {}}}
+```
+...
+2025-09-12 02:51:21 | INFO     | app.mcp_client:execute_tool:452 - Executing tool: available_leagues with params: {}
+2025-09-12 02:51:21 | ERROR    | app.mcp_client:execute_tool:486 - Tool execution error: 
+2025-09-12 02:51:21 | INFO     | app.mcp_client:process_query_stream:581 - Tool executed successfully: available_leagues
+2025-09-12 02:51:22 | INFO     | app.mcp_client:process_query_stream:552 - Gemini response (iteration 3): The provided `available_leagues` tool call returned no error, but also no data about available leagu...
+2025-09-12 02:51:27 | INFO     | app.mcp_client:execute_tool:452 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 02:51:27 | ERROR    | app.mcp_client:execute_tool:486 - Tool execution error: 
+2025-09-12 02:52:15 | INFO     | app.mcp_client:execute_tool:452 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 02:52:15 | ERROR    | app.mcp_client:execute_tool:486 - Tool execution error: 
+2025-09-12 02:52:19 | INFO     | app.mcp_client:execute_tool:452 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 02:52:19 | ERROR    | app.mcp_client:execute_tool:486 - Tool execution error: 
+2025-09-12 02:52:22 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Show me Arsenal's season stats
+2025-09-12 02:52:22 | INFO     | app.mcp_client:process_query_stream:516 - Processing streaming query: Show me Arsenal's season stats
+2025-09-12 02:52:24 | INFO     | app.mcp_client:process_query_stream:552 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "available_leagues", "parameters": {}}}
+```
+```json
+{"tool_call": {"n...
+2025-09-12 02:52:24 | WARNING  | app.mcp_client:parse_gemini_response:506 - Failed to parse tool call: Extra data: line 2 column 1 (char 63)
+2025-09-12 02:52:29 | INFO     | app.mcp_client:execute_tool:452 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 02:52:29 | ERROR    | app.mcp_client:execute_tool:486 - Tool execution error: 
+2025-09-12 02:53:21 | INFO     | app.mcp_client:execute_tool:452 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 02:53:21 | ERROR    | app.mcp_client:execute_tool:486 - Tool execution error: 
+2025-09-12 02:53:23 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: yes go ahead just change season to "season": "2324"
+2025-09-12 02:53:23 | INFO     | app.mcp_client:process_query_stream:516 - Processing streaming query: yes go ahead just change season to "season": "2324"
+2025-09-12 02:53:24 | INFO     | app.mcp_client:process_query_stream:552 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"league_id": "ESP-...
+2025-09-12 02:53:24 | INFO     | app.mcp_client:execute_tool:452 - Executing tool: get_player_season_stats_filtered with params: {'league_id': 'ESP-La Liga', 'season': '2324', 'player': 'Messi', 'team': 'Barcelona', 'stat_type': 'standard'}
+2025-09-12 02:53:24 | ERROR    | app.mcp_client:execute_tool:486 - Tool execution error: 
+2025-09-12 02:53:24 | INFO     | app.mcp_client:process_query_stream:581 - Tool executed successfully: get_player_season_stats_filtered
+2025-09-12 02:53:26 | INFO     | app.mcp_client:process_query_stream:552 - Gemini response (iteration 2): The tool call to `get_player_season_stats_filtered` with the parameters  `league_id: "ESP-La Liga"`,...
+2025-09-12 02:53:32 | INFO     | app.mcp_client:execute_tool:452 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 02:53:32 | ERROR    | app.mcp_client:execute_tool:486 - Tool execution error: 
+2025-09-12 02:54:14 | INFO     | app.mcp_client:cleanup:688 - MCP session closed
+2025-09-12 02:54:14 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-12 02:54:18 | INFO     | app.mcp_client:__init__:360 - SoccerMCPClient initialized
+2025-09-12 02:54:18 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-12 02:54:18 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-12 02:54:56 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: What leagues are available?
+2025-09-12 02:54:56 | INFO     | app.mcp_client:process_query_stream:515 - Processing streaming query: What leagues are available?
+2025-09-12 02:54:56 | INFO     | app.mcp_client:connect_to_server:367 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-12 02:54:58 | INFO     | app.mcp_client:connect_to_server:397 - Connected! Tools: 9
+2025-09-12 02:54:59 | INFO     | app.mcp_client:process_query_stream:551 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "available_leagues", "parameters": {}}}
+```
+...
+2025-09-12 02:54:59 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: available_leagues with params: {}
+2025-09-12 02:54:59 | INFO     | app.mcp_client:process_query_stream:580 - Tool executed successfully: available_leagues
+2025-09-12 02:55:00 | INFO     | app.mcp_client:process_query_stream:551 - Gemini response (iteration 2): The available leagues are: Big 5 European Leagues Combined, ENG-Premier League, ESP-La Liga, FRA-Lig...
+2025-09-12 02:55:05 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 02:55:05 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 02:57:46 | INFO     | app.mcp_client:cleanup:687 - MCP session closed
+2025-09-12 02:57:46 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-12 02:57:50 | INFO     | app.mcp_client:__init__:360 - SoccerMCPClient initialized
+2025-09-12 02:57:50 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-12 02:57:50 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-12 02:59:52 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Give me Ronaldo stats for La liga team Real madrid for season 2010-2011
+2025-09-12 02:59:52 | INFO     | app.mcp_client:process_query_stream:515 - Processing streaming query: Give me Ronaldo stats for La liga team Real madrid for season 2010-2011
+2025-09-12 02:59:52 | INFO     | app.mcp_client:connect_to_server:367 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-12 02:59:53 | INFO     | app.mcp_client:connect_to_server:397 - Connected! Tools: 9
+2025-09-12 02:59:54 | INFO     | app.mcp_client:process_query_stream:551 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"league_id": "ESP-...
+2025-09-12 02:59:55 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: get_player_season_stats_filtered with params: {'league_id': 'ESP-La Liga', 'season': '1011', 'player': 'Ronaldo', 'team': 'Real Madrid', 'stat_type': 'standard'}
+2025-09-12 02:59:55 | INFO     | app.mcp_client:process_query_stream:580 - Tool executed successfully: get_player_season_stats_filtered
+2025-09-12 02:59:57 | INFO     | app.mcp_client:process_query_stream:551 - Gemini response (iteration 2): Cristiano Ronaldo's 2010-2011 La Liga season with Real Madrid was incredibly prolific.  In 34 appear...
+2025-09-12 03:00:03 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 03:00:03 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 03:03:43 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 03:03:43 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 03:03:45 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Lamine Yamal stats for La liga season 2023-2024
+2025-09-12 03:03:45 | INFO     | app.mcp_client:process_query_stream:515 - Processing streaming query: Lamine Yamal stats for La liga season 2023-2024
+2025-09-12 03:03:45 | ERROR    | app.mcp_client:call_gemini:442 - Gemini API call failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 50
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 13
+}
+]
+2025-09-12 03:03:45 | INFO     | app.mcp_client:process_query_stream:551 - Gemini response (iteration 1): Error calling Gemini API: 429 You exceeded your current quota, please check your plan and billing de...
+2025-09-12 03:03:51 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 03:03:51 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 03:04:41 | INFO     | app.mcp_client:cleanup:687 - MCP session closed
+2025-09-12 03:04:41 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-12 03:04:46 | INFO     | app.mcp_client:__init__:360 - SoccerMCPClient initialized
+2025-09-12 03:04:46 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-12 03:04:46 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-12 11:35:40 | INFO     | app.mcp_client:__init__:360 - SoccerMCPClient initialized
+2025-09-12 11:35:40 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-12 11:35:40 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-12 11:36:15 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Hii, What are the leagues available?
+2025-09-12 11:36:15 | INFO     | app.mcp_client:process_query_stream:515 - Processing streaming query: Hii, What are the leagues available?
+2025-09-12 11:36:15 | INFO     | app.mcp_client:connect_to_server:367 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-12 11:36:17 | INFO     | app.mcp_client:connect_to_server:397 - Connected! Tools: 9
+2025-09-12 11:36:18 | INFO     | app.mcp_client:process_query_stream:551 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "available_leagues", "parameters": {}}}
+```
+...
+2025-09-12 11:36:18 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: available_leagues with params: {}
+2025-09-12 11:36:18 | INFO     | app.mcp_client:process_query_stream:580 - Tool executed successfully: available_leagues
+2025-09-12 11:36:19 | INFO     | app.mcp_client:process_query_stream:551 - Gemini response (iteration 2): The available leagues are: "Big 5 European Leagues Combined", "ENG-Premier League", "ESP-La Liga", "...
+2025-09-12 11:36:24 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 11:36:24 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 11:37:00 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 11:37:00 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 11:37:02 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: I want Ronaldo stats for Real Madrid in La liga season 2010-2011 
+2025-09-12 11:37:02 | INFO     | app.mcp_client:process_query_stream:515 - Processing streaming query: I want Ronaldo stats for Real Madrid in La liga season 2010-2011 
+2025-09-12 11:37:04 | INFO     | app.mcp_client:process_query_stream:551 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"league_id": "ESP-...
+2025-09-12 11:37:04 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: get_player_season_stats_filtered with params: {'league_id': 'ESP-La Liga', 'season': '1011', 'player': 'Ronaldo', 'team': 'Real Madrid', 'stat_type': 'standard'}
+2025-09-12 11:37:04 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 11:37:04 | INFO     | app.mcp_client:process_query_stream:580 - Tool executed successfully: get_player_season_stats_filtered
+2025-09-12 11:37:07 | INFO     | app.mcp_client:process_query_stream:551 - Gemini response (iteration 2): The provided tool call to `get_player_season_stats_filtered` returned an empty error string, which s...
+2025-09-12 11:37:15 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 11:37:15 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 11:39:34 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 11:39:34 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 11:39:38 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 11:39:38 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 11:39:40 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Who scored the most goals in Premier League?
+2025-09-12 11:39:40 | INFO     | app.mcp_client:process_query_stream:515 - Processing streaming query: Who scored the most goals in Premier League?
+2025-09-12 11:40:01 | INFO     | app.mcp_client:process_query_stream:551 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"league_id": "ENG-...
+2025-09-12 11:40:01 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: get_player_season_stats_filtered with params: {'league_id': 'ENG-Premier League', 'season': '2223', 'player': None, 'team': None, 'stat_type': 'standard'}
+2025-09-12 11:40:01 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 11:40:01 | INFO     | app.mcp_client:process_query_stream:580 - Tool executed successfully: get_player_season_stats_filtered
+2025-09-12 11:40:04 | INFO     | app.mcp_client:process_query_stream:551 - Gemini response (iteration 2): The provided tool result indicates an error in retrieving player statistics using `get_player_season...
+2025-09-12 11:40:05 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: get_player_season_stats_filtered with params: {'league_id': 'ENG-Premier League', 'season': '2223', 'player': None, 'team': None, 'stat_type': 'standard'}
+2025-09-12 11:40:05 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 11:40:05 | INFO     | app.mcp_client:process_query_stream:580 - Tool executed successfully: get_player_season_stats_filtered
+2025-09-12 11:40:08 | INFO     | app.mcp_client:process_query_stream:551 - Gemini response (iteration 3): The provided tool calls to `get_player_season_stats_filtered` returned an empty error message, indic...
+2025-09-12 11:40:08 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: get_player_season_stats_filtered with params: {'league_id': 'ENG-Premier League', 'season': '2223', 'stat_type': 'standard'}
+2025-09-12 11:40:08 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 11:40:08 | INFO     | app.mcp_client:process_query_stream:580 - Tool executed successfully: get_player_season_stats_filtered
+2025-09-12 11:40:12 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 11:40:12 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 11:40:37 | INFO     | app.mcp_client:cleanup:687 - MCP session closed
+2025-09-12 11:40:37 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-12 11:40:40 | INFO     | app.mcp_client:__init__:360 - SoccerMCPClient initialized
+2025-09-12 11:40:40 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-12 11:40:40 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-12 11:41:14 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Show me the Messi stats for barcelona in La liga season 2005-2006
+2025-09-12 11:41:14 | INFO     | app.mcp_client:process_query_stream:515 - Processing streaming query: Show me the Messi stats for barcelona in La liga season 2005-2006
+2025-09-12 11:41:14 | INFO     | app.mcp_client:connect_to_server:367 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-12 11:41:16 | INFO     | app.mcp_client:connect_to_server:397 - Connected! Tools: 9
+2025-09-12 11:41:18 | INFO     | app.mcp_client:process_query_stream:551 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"league_id": "ESP-...
+2025-09-12 11:41:18 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: get_player_season_stats_filtered with params: {'league_id': 'ESP-La Liga', 'season': '0506', 'player': 'Messi', 'team': 'Barcelona', 'stat_type': 'standard'}
+2025-09-12 11:41:19 | INFO     | app.mcp_client:process_query_stream:580 - Tool executed successfully: get_player_season_stats_filtered
+2025-09-12 11:41:26 | INFO     | app.mcp_client:process_query_stream:551 - Gemini response (iteration 2): Lionel Messi's statistics for Barcelona in La Liga during the 2005-2006 season were as follows:
+
+* *...
+2025-09-12 11:41:33 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 11:41:33 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 11:45:40 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 11:45:40 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 11:45:42 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Lamine Yamal stats for barcelona in La liga season 2023-2024 and compare it with Raphinha in a bargraph.
+2025-09-12 11:45:42 | INFO     | app.mcp_client:process_query_stream:515 - Processing streaming query: Lamine Yamal stats for barcelona in La liga season 2023-2024 and compare it with Raphinha in a bargraph.
+2025-09-12 11:45:45 | INFO     | app.mcp_client:process_query_stream:551 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"league_id": "ESP-...
+2025-09-12 11:45:45 | WARNING  | app.mcp_client:parse_gemini_response:505 - Failed to parse tool call: Extra data: line 2 column 1 (char 194)
+2025-09-12 11:45:51 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 11:45:51 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 11:46:08 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 11:46:08 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 11:46:10 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: okayy
+2025-09-12 11:46:10 | INFO     | app.mcp_client:process_query_stream:515 - Processing streaming query: okayy
+2025-09-12 11:46:11 | INFO     | app.mcp_client:process_query_stream:551 - Gemini response (iteration 1): okayy
+...
+2025-09-12 11:46:15 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 11:46:15 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 11:46:49 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 11:46:49 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 11:46:51 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Lamine Yamal stats for barcelona in La liga season 2023-2024 and compare it with Raphinha in same season same team same year
+2025-09-12 11:46:51 | INFO     | app.mcp_client:process_query_stream:515 - Processing streaming query: Lamine Yamal stats for barcelona in La liga season 2023-2024 and compare it with Raphinha in same season same team same year
+2025-09-12 11:46:53 | INFO     | app.mcp_client:process_query_stream:551 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"league_id": "ESP-...
+2025-09-12 11:46:53 | WARNING  | app.mcp_client:parse_gemini_response:505 - Failed to parse tool call: Extra data: line 2 column 1 (char 194)
+2025-09-12 11:46:58 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 11:46:58 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 11:47:27 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 11:47:27 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 11:47:29 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: tell me the differences!
+2025-09-12 11:47:29 | INFO     | app.mcp_client:process_query_stream:515 - Processing streaming query: tell me the differences!
+2025-09-12 11:47:30 | INFO     | app.mcp_client:process_query_stream:551 - Gemini response (iteration 1): The query "tell me the differences!" is too vague.  Please specify what differences you'd like to kn...
+2025-09-12 11:47:36 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 11:47:36 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 11:55:20 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 11:55:20 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 11:55:22 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Lamine Yamal stats for barcelona in La liga season 2023-2024
+2025-09-12 11:55:22 | INFO     | app.mcp_client:process_query_stream:515 - Processing streaming query: Lamine Yamal stats for barcelona in La liga season 2023-2024
+2025-09-12 11:55:25 | INFO     | app.mcp_client:process_query_stream:551 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"league_id": "ESP-...
+2025-09-12 11:55:25 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: get_player_season_stats_filtered with params: {'league_id': 'ESP-La Liga', 'season': '2324', 'player': 'Lamine Yamal', 'team': 'Barcelona', 'stat_type': 'standard'}
+2025-09-12 11:55:25 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 11:55:25 | INFO     | app.mcp_client:process_query_stream:580 - Tool executed successfully: get_player_season_stats_filtered
+2025-09-12 11:55:28 | INFO     | app.mcp_client:process_query_stream:551 - Gemini response (iteration 2): The provided tool result indicates an error retrieving Lamine Yamal's stats for Barcelona in the 202...
+2025-09-12 11:55:36 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 11:55:36 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 11:58:12 | INFO     | app.mcp_client:cleanup:687 - MCP session closed
+2025-09-12 11:58:12 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-12 11:58:17 | INFO     | app.mcp_client:__init__:360 - SoccerMCPClient initialized
+2025-09-12 11:58:17 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-12 11:58:17 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-12 11:58:39 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Lamine Yamal stats for barcelona in La liga season 2023-2024.
+2025-09-12 11:58:39 | INFO     | app.mcp_client:process_query_stream:515 - Processing streaming query: Lamine Yamal stats for barcelona in La liga season 2023-2024.
+2025-09-12 11:58:39 | INFO     | app.mcp_client:connect_to_server:367 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-12 11:58:41 | INFO     | app.mcp_client:connect_to_server:397 - Connected! Tools: 9
+2025-09-12 11:58:43 | INFO     | app.mcp_client:process_query_stream:551 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"league_id": "ESP-...
+2025-09-12 11:58:43 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: get_player_season_stats_filtered with params: {'league_id': 'ESP-La Liga', 'season': '2324', 'player': 'Lamine Yamal', 'team': 'Barcelona', 'stat_type': 'standard'}
+2025-09-12 11:58:44 | INFO     | app.mcp_client:process_query_stream:580 - Tool executed successfully: get_player_season_stats_filtered
+2025-09-12 11:58:47 | INFO     | app.mcp_client:process_query_stream:551 - Gemini response (iteration 2): Lamine Yamal's 2023-2024 La Liga season with Barcelona was impressive for a 16-year-old.  In 37 appe...
+2025-09-12 11:58:55 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 11:58:55 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 12:11:57 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 12:11:57 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 12:12:28 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 12:12:28 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 12:12:30 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Raphinha stats for barcelona in la liga season 2023-2024
+2025-09-12 12:12:30 | INFO     | app.mcp_client:process_query_stream:515 - Processing streaming query: Raphinha stats for barcelona in la liga season 2023-2024
+2025-09-12 12:12:39 | INFO     | app.mcp_client:process_query_stream:551 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"league_id": "ESP-...
+2025-09-12 12:12:39 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: get_player_season_stats_filtered with params: {'league_id': 'ESP-La Liga', 'season': '2324', 'player': 'Raphinha', 'team': 'Barcelona', 'stat_type': 'standard'}
+2025-09-12 12:12:39 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 12:12:39 | INFO     | app.mcp_client:process_query_stream:580 - Tool executed successfully: get_player_season_stats_filtered
+2025-09-12 12:12:53 | INFO     | app.mcp_client:process_query_stream:551 - Gemini response (iteration 2): The provided tool result indicates that there was no error retrieving data using `get_player_season_...
+2025-09-12 12:13:00 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 12:13:00 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 12:13:53 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 12:13:53 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 12:13:55 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Raphinha stats for barcelona in la liga season 2022-2023
+2025-09-12 12:13:55 | INFO     | app.mcp_client:process_query_stream:515 - Processing streaming query: Raphinha stats for barcelona in la liga season 2022-2023
+2025-09-12 12:14:07 | INFO     | app.mcp_client:process_query_stream:551 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"league_id": "ESP-...
+2025-09-12 12:14:07 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: get_player_season_stats_filtered with params: {'league_id': 'ESP-La Liga', 'season': '2223', 'player': 'Raphinha', 'team': 'Barcelona', 'stat_type': 'standard'}
+2025-09-12 12:14:07 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 12:14:07 | INFO     | app.mcp_client:process_query_stream:580 - Tool executed successfully: get_player_season_stats_filtered
+2025-09-12 12:14:19 | INFO     | app.mcp_client:process_query_stream:551 - Gemini response (iteration 2): The provided tool call to `get_player_season_stats_filtered` returned an empty error string.  This t...
+2025-09-12 12:14:24 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 12:14:24 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 12:20:48 | INFO     | app.mcp_client:cleanup:687 - MCP session closed
+2025-09-12 12:20:48 | INFO     | app.main:shutdown_event:70 - FastAPI server shut down
+2025-09-12 12:20:52 | INFO     | app.mcp_client:__init__:360 - SoccerMCPClient initialized
+2025-09-12 12:20:52 | INFO     | app.main:startup_event:62 - Starting Soccer Analytics Chatbot with SSE support
+2025-09-12 12:20:52 | INFO     | app.main:startup_event:63 - FastAPI server is ready!
+2025-09-12 12:22:18 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Lewandowski stats for barcelona in la liga season 2021-2022
+2025-09-12 12:22:19 | INFO     | app.mcp_client:process_query_stream:515 - Processing streaming query: Lewandowski stats for barcelona in la liga season 2021-2022
+2025-09-12 12:22:19 | INFO     | app.mcp_client:connect_to_server:367 - Connecting to MCP server: ./mcp_server/soccer_server.py
+2025-09-12 12:22:21 | INFO     | app.mcp_client:connect_to_server:397 - Connected! Tools: 9
+2025-09-12 12:22:34 | INFO     | app.mcp_client:process_query_stream:551 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"league_id": "ESP-...
+2025-09-12 12:22:34 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: get_player_season_stats_filtered with params: {'league_id': 'ESP-La Liga', 'season': '2122', 'player': 'Lewandowski', 'team': 'Barcelona', 'stat_type': 'standard'}
+2025-09-12 12:22:34 | INFO     | app.mcp_client:process_query_stream:580 - Tool executed successfully: get_player_season_stats_filtered
+2025-09-12 12:22:48 | INFO     | app.mcp_client:process_query_stream:551 - Gemini response (iteration 2): The provided tool result indicates an error ("ElementTree not initialized, missing root") when attem...
+2025-09-12 12:22:48 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: get_player_season_stats_filtered with params: {'league_id': 'ESP-La Liga', 'season': '2122', 'player': 'Lewandowski', 'team': 'Barcelona', 'stat_type': 'standard'}
+2025-09-12 12:22:48 | INFO     | app.mcp_client:process_query_stream:580 - Tool executed successfully: get_player_season_stats_filtered
+2025-09-12 12:23:01 | INFO     | app.mcp_client:process_query_stream:551 - Gemini response (iteration 3): The provided tool results indicate an error ("ElementTree not initialized, missing root") when attem...
+2025-09-12 12:23:01 | WARNING  | app.mcp_client:parse_gemini_response:505 - Failed to parse tool call: Extra data: line 2 column 1 (char 193)
+2025-09-12 12:23:08 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 12:23:08 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 12:24:54 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 12:24:54 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 12:24:56 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Lewandowski stats for barcelona in la liga season 2022-2023.
+
+
+2025-09-12 12:24:56 | INFO     | app.mcp_client:process_query_stream:515 - Processing streaming query: Lewandowski stats for barcelona in la liga season 2022-2023.
+
+
+2025-09-12 12:25:17 | INFO     | app.mcp_client:process_query_stream:551 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"league_id": "ESP-...
+2025-09-12 12:25:17 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: get_player_season_stats_filtered with params: {'league_id': 'ESP-La Liga', 'season': '2022-2023', 'player': 'Lewandowski', 'team': 'Barcelona', 'stat_type': 'standard'}
+2025-09-12 12:25:17 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 12:25:17 | INFO     | app.mcp_client:process_query_stream:580 - Tool executed successfully: get_player_season_stats_filtered
+2025-09-12 12:25:27 | INFO     | app.mcp_client:process_query_stream:551 - Gemini response (iteration 2): ```json
+{"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"league_id": "ESP-...
+2025-09-12 12:25:27 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: get_player_season_stats_filtered with params: {'league_id': 'ESP-La Liga', 'season': '2223', 'player': 'Lewandowski', 'team': 'Barcelona', 'stat_type': 'standard'}
+2025-09-12 12:25:27 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 12:25:27 | INFO     | app.mcp_client:process_query_stream:580 - Tool executed successfully: get_player_season_stats_filtered
+2025-09-12 12:25:35 | INFO     | app.mcp_client:process_query_stream:551 - Gemini response (iteration 3): ```json
+{"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"league_id": "ESP-...
+2025-09-12 12:25:35 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: get_player_season_stats_filtered with params: {'league_id': 'ESP-La Liga', 'season': '2223', 'player': 'Lewandowski', 'team': 'Barcelona', 'stat_type': 'standard'}
+2025-09-12 12:25:35 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 12:25:35 | INFO     | app.mcp_client:process_query_stream:580 - Tool executed successfully: get_player_season_stats_filtered
+2025-09-12 12:25:40 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 12:25:40 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 12:26:21 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 12:26:21 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 12:26:23 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Lewandowski stats for barcelona in la liga season 2022-2023?
+2025-09-12 12:26:23 | INFO     | app.mcp_client:process_query_stream:515 - Processing streaming query: Lewandowski stats for barcelona in la liga season 2022-2023?
+2025-09-12 12:26:31 | INFO     | app.mcp_client:process_query_stream:551 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"league_id": "ESP-...
+2025-09-12 12:26:32 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: get_player_season_stats_filtered with params: {'league_id': 'ESP-La Liga', 'season': '2022-2023', 'player': 'Lewandowski', 'team': 'Barcelona', 'stat_type': 'standard'}
+2025-09-12 12:26:32 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 12:26:32 | INFO     | app.mcp_client:process_query_stream:580 - Tool executed successfully: get_player_season_stats_filtered
+2025-09-12 12:26:40 | INFO     | app.mcp_client:process_query_stream:551 - Gemini response (iteration 2): ```json
+{"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"league_id": "ESP-...
+2025-09-12 12:26:41 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: get_player_season_stats_filtered with params: {'league_id': 'ESP-La Liga', 'season': '2223', 'player': 'Lewandowski', 'team': 'Barcelona', 'stat_type': 'standard'}
+2025-09-12 12:26:41 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 12:26:41 | INFO     | app.mcp_client:process_query_stream:580 - Tool executed successfully: get_player_season_stats_filtered
+2025-09-12 12:26:47 | INFO     | app.mcp_client:process_query_stream:551 - Gemini response (iteration 3): ```json
+{"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"league_id": "ESP-...
+2025-09-12 12:26:47 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: get_player_season_stats_filtered with params: {'league_id': 'ESP-La Liga', 'season': '2223', 'player': 'Lewandowski', 'team': 'Barcelona', 'stat_type': 'standard'}
+2025-09-12 12:26:47 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 12:26:47 | INFO     | app.mcp_client:process_query_stream:580 - Tool executed successfully: get_player_season_stats_filtered
+2025-09-12 12:26:51 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 12:26:51 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 12:27:58 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 12:27:58 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 12:28:00 | INFO     | app.main:generate_stream:114 - Starting SSE stream for query: Robert Lewandowski's performance for Barcelona  in La liga season 2022-2023, i want it.
+2025-09-12 12:28:00 | INFO     | app.mcp_client:process_query_stream:515 - Processing streaming query: Robert Lewandowski's performance for Barcelona  in La liga season 2022-2023, i want it.
+2025-09-12 12:28:10 | INFO     | app.mcp_client:process_query_stream:551 - Gemini response (iteration 1): ```json
+{"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"league_id": "ESP-...
+2025-09-12 12:28:10 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: get_player_season_stats_filtered with params: {'league_id': 'ESP-La Liga', 'season': '2223', 'player': 'Robert Lewandowski', 'team': 'Barcelona', 'stat_type': 'standard'}
+2025-09-12 12:28:10 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 12:28:10 | INFO     | app.mcp_client:process_query_stream:580 - Tool executed successfully: get_player_season_stats_filtered
+2025-09-12 12:28:20 | INFO     | app.mcp_client:process_query_stream:551 - Gemini response (iteration 2): ```json
+{"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"league_id": "ESP-...
+2025-09-12 12:28:20 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: get_player_season_stats_filtered with params: {'league_id': 'ESP-La Liga', 'season': '2223', 'player': 'Robert Lewandowski', 'team': 'Barcelona', 'stat_type': 'standard'}
+2025-09-12 12:28:20 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 12:28:20 | INFO     | app.mcp_client:process_query_stream:580 - Tool executed successfully: get_player_season_stats_filtered
+2025-09-12 12:28:30 | INFO     | app.mcp_client:process_query_stream:551 - Gemini response (iteration 3): ```json
+{"tool_call": {"name": "get_player_season_stats_filtered", "parameters": {"league_id": "ESP-...
+2025-09-12 12:28:30 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: get_player_season_stats_filtered with params: {'league_id': 'ESP-La Liga', 'season': '2223', 'player': 'Robert Lewandowski', 'team': 'Barcelona', 'stat_type': 'standard'}
+2025-09-12 12:28:30 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 
+2025-09-12 12:28:30 | INFO     | app.mcp_client:process_query_stream:580 - Tool executed successfully: get_player_season_stats_filtered
+2025-09-12 12:28:34 | INFO     | app.mcp_client:execute_tool:451 - Executing tool: soccerdata-mcp:available_leagues with params: {}
+2025-09-12 12:28:34 | ERROR    | app.mcp_client:execute_tool:485 - Tool execution error: 

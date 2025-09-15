@@ -1,0 +1,37 @@
+# Core Framework Dependencies
+fastapi>=0.109.0
+uvicorn[standard]==0.24.0
+streamlit==1.28.1
+
+# MCP Dependencies
+mcp==1.0.0
+
+# AI Dependencies - Gemini
+google-generativeai==0.3.1
+
+# Data Processing and Soccer Data
+soccerdata==1.5.0
+pandas==2.1.3
+numpy==1.24.3
+
+# Basic Visualization
+plotly==5.17.0
+
+# Web and API (Enhanced for SSE)
+httpx
+pydantic>=2.8.0,<3.0
+python-multipart==0.0.6
+requests==2.31.0  # For SSE client support
+sse-starlette>=2.0,<3.0
+
+# Utilities and Configuration
+python-dotenv==1.0.0
+loguru==0.7.2
+
+# Development Tools (Optional)
+pytest==7.4.3
+black==23.11.0
+
+# Additional SSE and Streaming Support
+aiofiles==23.2.1  # Async file operations
+asyncio-throttle==1.0.2  # Rate limiting for streams
