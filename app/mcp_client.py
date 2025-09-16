@@ -477,6 +477,7 @@ from mcp.client.stdio import stdio_client
 import google.generativeai as genai
 from app.config import config
 from utils.logger import get_logger
+import sys
 
 logger = get_logger("mcp_client")
 
@@ -515,7 +516,7 @@ class SoccerMCPClient:
             logger.info(f"Connecting to MCP server: {config.MCP_SERVER_PATH}")
             
             server_params = StdioServerParameters(
-                command="python",
+                command=sys.executable,
                 args=["-u", config.MCP_SERVER_PATH],
             )
             
