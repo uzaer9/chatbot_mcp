@@ -5,6 +5,7 @@ streamlit==1.28.1
 
 # MCP Dependencies
 mcp==1.0.0
+mcp-server
 
 # AI Dependencies - Gemini
 google-generativeai==0.3.1
