@@ -4,6 +4,7 @@ import json
 import time
 from typing import Optional, Dict, Any
 from urllib.parse import quote
+import os
 
 # Import the visualization engine
 from visualization import process_visualization_request
@@ -17,7 +18,7 @@ st.set_page_config(
 )
 
 # Constants
-FASTAPI_URL = "http://localhost:8000"
+FASTAPI_URL = os.getenv("FASTAPI_URL","http://localhost:8000")
 
 def initialize_session_state():
     """Initialize Streamlit session state"""
