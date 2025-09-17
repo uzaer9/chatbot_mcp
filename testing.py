@@ -1,21 +1,22 @@
-# test_mcp.py
-import asyncio
-from mcp import ClientSession, StdioServerParameters
-from mcp.client.stdio import stdio_client
+import requests
 
-async def test_connection():
-    server_params = StdioServerParameters(
-        command="python",
-        args=["-u", r"E:\Football_CB\mcp_server\soccer_server.py"],
-    )
+# This header makes your script look like it's a real Chrome browser on Windows.
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+}
+
+try:
+    # Send the request with the new header
+    response = requests.get("https://fbref.com", headers=headers, timeout=10)
     
-    async with stdio_client(server_params) as (read_stream, write_stream):
-        async with ClientSession(read_stream, write_stream) as session:
-            await session.initialize()
-            tools = await session.list_tools()
-            print(f"Connected! Found {len(tools.tools)} tools")
-            for tool in tools.tools:
-                print(f"  - {tool.name}")
+    print(f"Status: {response.status_code}")
 
-if __name__ == "__main__":
-    asyncio.run(test_connection())
+    if response.status_code == 200:
+        print("Success! Connection is live and access is granted.")
+    elif response.status_code == 403:
+        print("Still blocked. The site may have more advanced bot detection.")
+    else:
+        print(f"Connection is live, but received a different status: {response.status_code}")
+
+except Exception as e:
+    print(f"Connection failed: {e}")

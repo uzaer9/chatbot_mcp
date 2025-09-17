@@ -468,9 +468,13 @@
 #         _context_manager = None
 #         self.session = None
 #         logger.info("MCP session closed")
+
+#mcp_client.py
+
 import asyncio
 import json
 import re
+import anyio
 from typing import List, Dict, Any, Optional
 from mcp import ClientSession, StdioServerParameters
 from mcp.client.stdio import stdio_client
@@ -479,13 +483,16 @@ from app.config import config
 from utils.logger import get_logger
 import sys
 
+
 logger = get_logger("mcp_client")
 
+
 # Global variables to maintain connection
-_read_stream = None
-_write_stream = None
-_session = None
-_context_manager = None
+# _read_stream = None
+# _write_stream = None
+# _session = None
+# _context_manager = None
+
 
 class SoccerMCPClient:
     """Multi-tool MCP Client with intelligent visualization data filtering"""
@@ -587,15 +594,21 @@ class SoccerMCPClient:
         
         visualization_prompt = f"""You are a data analyst extracting visualization data from soccer statistics across multiple data types.
 
+
 ORIGINAL USER QUERY: {original_query}
+
 
 RAW DATA RETRIEVED: {json.dumps(raw_data, indent=2)}
 
+
 DETECTED DATA TYPE: {data_type}
+
 
 TASK: Extract ONLY the data fields needed for visualization based on the user's query and data type.
 
+
 VISUALIZATION PARAMETERS BY DATA TYPE:
+
 
 PLAYER STATS - Include these fields only:
 - player, (player name)
@@ -607,6 +620,7 @@ PLAYER STATS - Include these fields only:
 - Per 90 Minutes,Ast (assists per 90)
 EXCLUDE: Playing Time,Min (minutes) - clutters bar charts
 
+
 TEAM STATS - Include these fields only:
 - team (team name)
 - Pts (points)
@@ -617,18 +631,21 @@ TEAM STATS - Include these fields only:
 - GA (goals against)
 - GD (goal difference)
 
-SHOT DATA - Include these fields only:
+
+SHOT DATA - Include these fields :
 - player (if player analysis)
 - team (if team analysis)  
 - outcome_counts
 - shot_totals
 
-MATCH DATA - Include these fields only:
+
+MATCH DATA - Include these fields :
 - date
 - home_team
 - away_team
 - result
 - score
+
 
 CHART TYPE RECOMMENDATIONS:
 - Single entity: Bar chart + Pie chart for breakdowns
@@ -636,13 +653,16 @@ CHART TYPE RECOMMENDATIONS:
 - Distribution data: Pie chart for percentages
 - Goals/Assists: Pie chart showing contribution split
 
+
 RULES:
 1. Remove cluttering fields (like minutes for players)
 2. Focus on key performance metrics
 3. Enable both bar charts and pie charts
 4. Keep data clean and minimal
 
+
 Extract visualization data (respond with JSON only):"""
+
 
         try:
             logger.info("Sending multi-tool data to Gemini for visualization filtering...")
@@ -653,7 +673,11 @@ Extract visualization data (respond with JSON only):"""
             json_match = re.search(r'\{.*\}', response.text, re.DOTALL)
             if json_match:
                 extracted_data = json.loads(json_match.group())
-                
+                if 'visualization_data' in extracted_data:
+                    extracted_data = {'players': extracted_data['visualization_data']}
+                if 'player' in extracted_data and 'players' not in extracted_data:
+                    extracted_data = {'players': [extracted_data]}
+
                 logger.info(f"Extracted visualization data: {json.dumps(extracted_data, indent=2)}")
                 logger.info(f"=== MULTI-TOOL VISUALIZATION EXTRACTION SUCCESS ===")
                 
@@ -677,6 +701,8 @@ Extract visualization data (respond with JSON only):"""
         """Call Gemini API with enhanced multi-tool context"""
         try:
             tool_instructions = """
+You are an intelligent soccer analytics assistant with access to comprehensive data tools and visualization capabilities.
+
 AVAILABLE SOCCER LEAGUES:
 - "Big 5 European Leagues Combined"
 - "ENG-Premier League" 
@@ -688,32 +714,93 @@ AVAILABLE SOCCER LEAGUES:
 - "INT-World Cup"
 - "ITA-Serie A"
 
-MULTI-TOOL CAPABILITIES:
+AVAILABLE TOOLS:
 
 1. PLAYER ANALYSIS - get_player_season_stats_filtered:
-- league_id: League from above list
-- season: Format "XXYY" (e.g., "2223" for 2022-23)
-- stat_type: "standard", "shooting", "passing", "defense", "possession", "misc"
-- player: Player name
-- team: Team name (optional)
+   - league_id: League from above list
+   - season: Format "XXYY" (e.g., "2223" for 2022-23, "1314" for 2013-14)
+    Select stat_type only when required if not specified then use standard.
+   - stat_type: "standard", "shooting", "passing", "defense", "possession", "misc"
+   - player: Player name
+   - team: Team name (optional)
 
 2. TEAM ANALYSIS - read_team_season_stats:
-- leagues: League ID from above list
-- seasons: Format "XXYY"
-- stat_type: "standard", "shooting", "passing_types", etc.
-- team_name: Team to filter
-- filters: Additional filters
+   - leagues: League ID from above list
+   - seasons: Format "XXYY"
+   - stat_type: "standard", "shooting", "passing_types", etc.
+   - team_name: Team to filter
+   - filters: Additional filters
 
 3. SHOT ANALYSIS - read_shot_events_filtered:
-- leagues: League ID
-- seasons: Format "XXYY"
-- team: Team name (optional)
-- player: Player name (optional)
-- outcome: Shot outcome filter (optional)
+   - leagues: League ID, seasons: Format "XXYY"
+   - team, player, outcome: Optional filters
 
 4. MATCH ANALYSIS - read_schedule:
-- leagues: League ID
-- seasons: Format "XXYY"
+   - leagues: League ID, seasons: Format "XXYY"
+Analyse the data extracted from these tools to determine the best visualization approach.
+Queries can be asked from the tools data meta data.
+VISUALIZATION CHART TYPES:
+- "spider": Multi-dimensional performance profiles (ideal for single players/teams)
+- "bar": Comparisons between entities (ideal for multiple players/teams)  
+- "pie": Distributions and breakdowns (goals vs assists, wins/draws/losses)
+- "table": Detailed data examination (reference data, comprehensive stats)
+
+CHART SELECTION DECISION TREE:
+
+**SPIDER CHART** - Select when:
+- Whenever you think it is required based on query intent
+
+- Single player analysis: "Show Messi performance profile"
+- Single team analysis: "Real Madrid strengths and weaknesses"  
+- Multi-dimensional analysis: "Player's overall performance"
+- Keywords: "profile", "strengths", "weaknesses", "spider", "radar", "overall performance"
+
+**BAR CHART** - Select when:
+- Whenever you think it is required based on query intent
+
+- Comparisons: 
+- Whenever you think it is required based on query intent
+ example :- "Compare Messi vs Ronaldo", "Top scorers", "Team comparison"
+- Multiple entities: "Best players", "Team rankings"
+- Trend analysis: "Goals scored over matches"
+- Keywords: "compare", "vs", "top", "best", "ranking", "versus"
+
+**PIE CHART** - Select when:
+- Whenever you think it is required based on query intent
+- Distribution analysis: "Goals vs assists breakdown", "Win/loss ratio"
+- Percentage/proportion queries: "Shot accuracy", "Result distribution"
+- Single entity breakdowns: "Messi's goal contributions"
+- Keywords: "distribution", "breakdown", "ratio", "percentage", "proportion"
+
+**TABLE** - Select when:
+- Whenever you think it is required based on query intent
+
+- Detailed data requests: "All stats", "Complete data", "Detailed breakdown"
+- Reference data: "Available leagues", "Season information"
+- Complex data: Shot events, match schedules, comprehensive stats
+- Keywords: "detailed", "all stats", "complete", "list", "available"
+RESPONSE FORMAT:
+When data is needed, respond with this exact JSON structure:
+example:- 
+{{
+    "tool_call": {{
+        "name": "exact_tool_name",
+        "parameters": {{
+            "league_id": "ESP-La Liga",
+            "season": "1314",
+            "team_name": "Real Madrid"
+        }}
+    }},
+    "chart_type": "bar|spider|pie|table",
+    "reasoning": "explanation of tool and chart selection"
+}}
+
+CRITICAL INSTRUCTIONS:
+- For multi-entity queries (Real Madrid vs Barcelona), call ONE tool at a time but specify which chart to use for the final combined data
+- Always use proper season format "XXYY"
+- Choose chart type based on query intent and data characteristics
+- Include reasoning for both tool and chart selection
+
 
 CRITICAL RULES:
 - Season format is ALWAYS "XXYY" (2223 = 2022-23, 0910 = 2009-10)
@@ -725,13 +812,18 @@ CRITICAL RULES:
 - Match data → read_schedule
 """
 
+
             system_prompt = f"""You are a multi-tool soccer analytics expert focused on data retrieval across different data types.
+
 
 {self.format_tools_for_gemini()}
 
+
 {tool_instructions}
 
+
 User Query: {query}
+
 
 RESPONSE PROTOCOL:
 1. Analyze what type of data the user needs (player, team, shots, matches)
@@ -739,7 +831,9 @@ RESPONSE PROTOCOL:
 3. For comparisons, call tools separately for each entity
 4. Provide comprehensive analysis based on retrieved data
 
+
 Focus on accurate tool selection and data retrieval."""
+
 
             response = self.model.generate_content(system_prompt)
             return response.text
@@ -754,6 +848,10 @@ Focus on accurate tool selection and data retrieval."""
             if not self.session:
                 return {"error": "MCP session not connected"}
             
+            # Fix: Ensure filters param is dict if provided as None
+            if 'filters' in parameters and parameters['filters'] is None:
+                parameters['filters'] = {}
+
             logger.info(f"Executing multi-tool: {tool_name} with params: {parameters}")
             
             result = await self.session.call_tool(tool_name, parameters)
@@ -788,10 +886,60 @@ Focus on accurate tool selection and data retrieval."""
                 
                 return parsed_result
             except json.JSONDecodeError:
+                logger.warning(f"Could not parse tool result from {tool_name}: returning raw content")
                 return {"data": tool_result}
+            
+        except anyio.ClosedResourceError:
+            logger.warning("MCP session closed, attempting to safely reconnect...")
+            try:
+                # Clean up existing contexts before reconnect
+                global _session, _context_manager, _read_stream, _write_stream
                 
+                if _session:
+                    await _session.__aexit__(None, None, None)
+                if _context_manager:
+                    await _context_manager.__aexit__(None, None, None)
+            except Exception:
+                pass
+
+            connected = await self.connect_to_server()
+            if not connected:
+                return {"error": "Session closed and reconnection failed"}
+
+            try:
+                result = await self.session.call_tool(tool_name, parameters)
+                
+                if hasattr(result, 'isError') and result.isError:
+                    return {"error": f"Tool execution failed: {result.content}"}
+                
+                if hasattr(result, 'content') and result.content:
+                    if isinstance(result.content, list) and result.content:
+                        content = result.content[0]
+                        if hasattr(content, 'text'):
+                            tool_result = content.text
+                        else:
+                            tool_result = str(content)
+                    else:
+                        tool_result = str(result.content)
+                else:
+                    tool_result = "{}"
+                
+                try:
+                    parsed_result = json.loads(tool_result)
+                    data_type = self.detect_data_type(parsed_result)
+                    logger.info(f"Tool {tool_name} returned {data_type} data (after reconnect)")
+                    return parsed_result
+                except json.JSONDecodeError:
+                    logger.warning(f"Could not parse tool result after reconnect for {tool_name}")
+                    return {"data": tool_result}
+                
+            except Exception as e2:
+                logger.error(f"Retry after reconnection failed: {e2}")
+                return {"error": f"Session closed and reconnection failed: {e2}"}
         except Exception as e:
+            import traceback
             logger.error(f"Multi-tool execution error: {e}")
+            logger.error(f"Full traceback: {traceback.format_exc()}")
             return {"error": str(e)}
     
     def parse_gemini_response(self, response: str) -> tuple[bool, Optional[Dict], str]:
@@ -898,6 +1046,7 @@ Focus on accurate tool selection and data retrieval."""
                     
                     tool_context = f"""Tool {tool_data['name']} returned: {json.dumps(tool_result, indent=2)}
 
+
 Please provide a comprehensive answer based on this data."""
                     
                     query = f"{query}\n\nTool Result: {tool_context}"
@@ -965,7 +1114,7 @@ Please provide a comprehensive answer based on this data."""
                     
                     self.messages.append({"role": "assistant", "content": enhanced_response})
                     return
-            
+                
             yield self.format_sse_event("error", {
                 "message": "Maximum iterations reached. Please try a simpler query."
             })
@@ -1022,6 +1171,8 @@ Please provide a comprehensive answer based on this data."""
                     elif data_type == 'team_stats':
                         if isinstance(tool_result, list):
                             self.accumulated_tool_results['teams'].extend(tool_result)
+                        elif 'teams' in tool_result:
+                            self.accumulated_tool_results['teams'].extend(tool_result['teams'])
                     
                     combined_result = {}
                     for key, values in self.accumulated_tool_results.items():
@@ -1085,4 +1236,4 @@ Please provide a comprehensive answer based on this data."""
         _write_stream = None
         _context_manager = None
         self.session = None
-        logger.info("Multi-tool MCP session closed")
+        logger.info("Multi-tool MCP session closed") 
